@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.13)  13 MAR 2018 13:15
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.1.3)  13 MAR 2018 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1595,143 +1595,33 @@ File: xeCJK.cfg 2016/02/10 v3.3.4 Configuration file for xeCJK package
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font 
 .................................................
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
 
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no 
- in font FreeSans/OT:script=latn;language=DFLT;mapping=tex-text;!
-! Extra \endcsname.
-<recently read> \endcsname 
-                           
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \ver@beamertheme 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   \ver@beamertheme 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \ver@beamertheme 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Extra \endcsname.
-<recently read> \endcsname 
-                           
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \unhbox 
-l.30 \usetheme{~/texmf/kmthemeDarkConsole.sty}
-                                              
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-
-LaTeX Warning: You have requested, on input line 30, version
-               `' of package beamertheme\nobreakspace {}/texmf/kmthemeDarkConso
-le.sty,
-               but only version
-               `\ver@beamertheme \unhbox \voidb@x \penalty \@M \ {}/texmf/kmthe
-meDarkConsole.sty.sty\endcsname '
-               is available.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\long' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\long' on input line 47.
+(hyperref)                removing `\<def>-command' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 47.
+(hyperref)                removing `\beamer@todo' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beamer@todo' on input line 47.
+(hyperref)                removing `\<def>-command' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 47.
+(hyperref)                removing `\beamer@ospec' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beamer@ospec' on input line 47.
+(hyperref)                removing `\beamer@argscount' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beamer@argscount' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 47.
+(hyperref)                removing `\@ifnextchar' on input line 45.
 
 \g__fontspec_family_IPAGothic_int=\count273
 .................................................
@@ -1763,30 +1653,30 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (./C_presentation_1_dansk.aux)
 \openout1 = `C_presentation_1_dansk.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 47.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 47.
  (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    ... okay on input line 47.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1824,7 +1714,7 @@ LaTeX Font Info:    ... okay on input line 49.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1834,71 +1724,71 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count274
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
 
 (./C_presentation_1_dansk.out) (./C_presentation_1_dansk.out)
 \@outlinefile=\write5
 \openout5 = `C_presentation_1_dansk.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 49.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 49.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 47.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/FreeSerif(0)/m/n on input line 49.
+(Font)                  OT1/cmss/m/n --> EU1/FreeSerif(0)/m/n on input line 47.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 49.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/FreeSans(0)/bx/n on input line 49.
+(Font)                  OT1/cmr/bx/n --> EU1/FreeSans(0)/bx/n on input line 47.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/FreeSans(0)/bx/n on input line 49.
+(Font)                  OT1/cmr/bx/n --> EU1/FreeSans(0)/bx/n on input line 47.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 49.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/FreeSans(0)/m/n on input line 49.
+(Font)                  OT1/cmss/m/n --> EU1/FreeSans(0)/m/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/FreeSans(0)/m/n on input line 49.
+(Font)                  OT1/cmss/bx/n --> EU1/FreeSans(0)/m/n on input line 47.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 49.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/FreeSans(0)/m/it on input line 49.
+(Font)                  OT1/cmr/m/it --> EU1/FreeSans(0)/m/it on input line 47.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/FreeSans(0)/m/it on input line 49
+(Font)                  OT1/cmr/bx/it --> EU1/FreeSans(0)/m/it on input line 47
 .
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 49.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> EU1/LatinModernMono(0)/m/n on input li
-ne 49.
+ne 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> EU1/LatinModernMono(0)/m/n on input li
-ne 49.
+ne 47.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
 (Font)                  EU1/FreeSans(0)/m/n --> EU1/FreeSans(0)/bx/n on input l
-ine 49.
+ine 47.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  EU1/FreeSans(0)/m/it --> EU1/FreeSans(0)/bx/it on input
- line 49.
+ line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  OT1/cmss/bx/n --> EU1/FreeSerif(0)/bx/n on input line 4
-9.
+7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  EU1/FreeSans(0)/bx/n --> EU1/FreeSans(0)/bx/n on input 
-line 49.
+line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  EU1/FreeSans(0)/m/n --> EU1/FreeSans(0)/bx/n on input l
-ine 49.
+ine 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  EU1/FreeSans(0)/m/it --> EU1/FreeSans(0)/bx/it on input
- line 49.
+ line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  EU1/LatinModernMono(0)/m/n --> EU1/LatinModernMono(0)/b
-x/n on input line 49.
+x/n on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1924,25 +1814,22 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 49.
+LaTeX Info: Redefining \includegraphics on input line 47.
 
 (./C_presentation_1_dansk.nav)
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 51.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 51.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \vbox (31.28712pt too high) has occurred while \output is active []
+) [1
 
-
-[1
-
-] (./C_presentation_1_dansk.toc) [2
+]
+(./C_presentation_1_dansk.toc) [2
 
 ] [3
 
@@ -1961,7 +1848,7 @@ Overfull \vbox (31.28712pt too high) has occurred while \output is active []
 ] [10
 
 ]
-Overfull \vbox (30.41707pt too high) detected at line 96
+Overfull \vbox (30.41707pt too high) detected at line 94
  []
 
 [11
@@ -1976,18 +1863,18 @@ Overfull \vbox (30.41707pt too high) detected at line 96
 \tf@snm=\write8
 \openout8 = `C_presentation_1_dansk.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
  (./C_presentation_1_dansk.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 97.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 97.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 95.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 95.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
  ) 
 Here is how much of TeX's memory you used:
- 35473 strings out of 493638
- 689067 string characters out of 6146796
- 716473 words of memory out of 5000000
- 38322 multiletter control sequences out of 15000+600000
+ 35470 strings out of 493638
+ 689026 string characters out of 6146797
+ 716406 words of memory out of 5000000
+ 38319 multiletter control sequences out of 15000+600000
  11794 words of font info for 87 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  56i,15n,72p,10431b,619s stack positions out of 5000i,500n,10000p,200000b,80000s
