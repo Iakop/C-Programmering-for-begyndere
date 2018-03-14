@@ -1,98 +1,81 @@
+%% Præsentation for C-programmering for begyndere
+%% Lavet af Jacob Bechmann Pedersen og Jacob Skjødt Nielsen
+%% For C undervisning i IDA 
 %%
-%% This is file `example_DarkConsole.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% examples_kmbeamer.dtx  (with options: `DarkConsole')
-%% Copyright (c) 2011-2013 Kazuki Maeda <kmaeda@users.sourceforge.jp>
+%% Theme: `DarkConsole'
+%% Copyright (c) 2011-2017 Kazuki Maeda <kmaeda@kmaeda.net>
 %% 
 %% Distributable under the MIT License:
-%% http://www.opensource.org/licenses/mit-license.php
-%% 
+%% http://www.opensource.org/licenses/mit-license.php 
 
-%%% もし pdfTeX や LuaTeX を使うなら dvipdfmx オプションを外す．
-% \documentclass[dvipdfmx]{beamer}
-
-% Modified by LianTze Lim to work with fontspec/xelatex
+%% Preamble
 \documentclass{beamer}
-\usepackage{mathspec}
-\usepackage{xeCJK}
-\setCJKmainfont{IPAPMincho}
-\setCJKsansfont{IPAGothic}
-\setCJKmonofont{IPAGothic}
 
-% You can set fonts for Latin script here
-\setmainfont{FreeSerif}
-\setsansfont{FreeSans}
-\setmonofont{Latin Modern Mono}
+\usepackage{hyperref} % Add a link to your document
+\usepackage{graphicx} % Add pictures to your document
+\usepackage{listings} % Source code formatting and highlighting
+\usepackage[utf8]{inputenc} % Gives UTF-8 encoded characters such as Æ, Ø, Å.
 
-%%% もし pTeX + dvipdfmx を使うならば以下のどちらかを環境に合わせてコメントアウト．
-%% \AtBeginDvi{\special{pdf:tounicode EUC-UCS2}} % EUC の場合
-%% \AtBeginDvi{\special{pdf:tounicode 90ms-RKSJ-UCS2}} % SJIS の場合
+\usetheme{DarkConsole}
+\title{C-Programmering for begyndere}
+\subtitle{Del 1 - Hello World, Datatyper, Matematik og I/O}
+\author{Jacob B. Pedersen\footnote{jacob.bp@mvb.net} og Jakob S. Nielsen}
 
-%%% もし LuaTeX で日本語を出力するなら以下をコメントアウト．
-%% \usefonttheme{luatexja}
-%% \hypersetup{unicode}
-
-%%% 日本語を使うなら以下を入れると定理環境中のフォントが立体になる．
-%%% 欧文なら不要．
-%%% LLT: Comment out this line if your presentation is in English or other European languages
-\setbeamertemplate{theorems}[normal font]
-
-\title{\texttt{kmbeamer}のテスト}
-\subtitle{DarkConsole編}
-\author{前田一貴\footnote{\texttt{kmaeda@users.sourceforge.jp}}}
-
+%% Document
 \begin{document}
 
 \begin{frame}
-  \maketitle
+	\begin{columns}
+		\begin{column}
+			\maketitle
+		\end{column}
+		\begin{column}
+			\includegraphics{assets/The_C_Programming_Language_logo.png}
+		\end{column}
+	\end{columns}
 \end{frame}
 
-\begin{frame}{目次}
+\begin{frame}{Indhold}
   \tableofcontents
 \end{frame}
 
-\section{テスト}
+\section{Intro til C}
 
-\begin{frame}{テスト1}
-  これはテストです．
+\begin{frame}{C's historie}
+  Indsæt C's historie her.
 
   \pause
 
+  The followings are mathematical lists.
+
   \begin{enumerate}
-  \item リスト1\pause
-  \item リスト2\pause
-  \item リスト3
+  \item Item $1$\pause
+  \item Item $1+1$\pause
+  \item Item $1+1+1$
   \end{enumerate}
 
   \pause
 
   \begin{itemize}
-  \item リスト1\pause
-  \item リスト2\pause
-  \item リスト3
+  \item Item $1+1+1+1$\pause
+  \item Item $1+1+1+1+1$\pause
+  \item Item $1+1+1+1+1+1$
   \end{itemize}
 \end{frame}
 
-\begin{frame}{テスト2}
-  数式のテスト．
+\begin{frame}{Slide $1+1$}
+  \alert{Get started in writing equations!!!}
 
-  \begin{theorem}[Gauss積分]
-    以下の等式が成り立つ：
+  \begin{theorem}[Gaussian integral]
+    The following integral is very well known:
     \begin{equation}
       \int_{-\infty}^\infty \mathrm{e}^{-x^2}\,\mathrm{d}x=\sqrt{\pi}.
     \end{equation}
+
   \end{theorem}
 \end{frame}
 
-\section{もっとテスト}
-\begin{frame}
-あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+\section{More Mathematical Story}
+\begin{frame}{Slide $1+1+1$}
 \end{frame}
 \end{document}
-\endinput
-%%
-%% End of file `example_DarkConsole.tex'.
