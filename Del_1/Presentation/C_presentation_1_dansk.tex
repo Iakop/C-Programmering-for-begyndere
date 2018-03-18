@@ -16,66 +16,146 @@
 \usepackage{listings} % Source code formatting and highlighting
 \usepackage[utf8]{inputenc} % Gives UTF-8 encoded characters such as Æ, Ø, Å.
 
+%% Setting the C language type, for viewing pleasure:
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
 \usetheme{DarkConsole}
 \title{C-Programmering for begyndere}
 \subtitle{Del 1 - Hello World, Datatyper, Matematik og I/O}
-\author{Jacob B. Pedersen\footnote{jacob.bp@mvb.net} og Jakob S. Nielsen}
+\author{Jacob B. Pedersen\footnote{jacob.bp@mvb.net} og Jakob S. Nielsen\footnote{indsæt mail her}}
 
 %% Document
 \begin{document}
 
 \begin{frame}
-	\begin{columns}
-		\begin{column}
-			\maketitle
-		\end{column}
-		\begin{column}
-			\includegraphics{assets/The_C_Programming_Language_logo.png}
-		\end{column}
-	\end{columns}
+	\maketitle
 \end{frame}
 
 \begin{frame}{Indhold}
-  \tableofcontents
+	\tableofcontents
 \end{frame}
 
 \section{Intro til C}
+%%----------------------------------------------------------------------
+\subsection{Hvad er C?}
+
+\begin{frame}{Hvad er C?}
+	\begin{columns}
+	
+		\begin{column}{0.5\textwidth}
+		\begin{itemize}
+		\item {C er letvægtigt og hurtigt!}
+			\begin{itemize}
+			\item{Fylder meget lidt plads}
+			\item{Kører meget stærkt!}
+			\end{itemize}
+		\item {Kompatibelt og portabelt til de fleste systemer}
+		\item {Kan bruges bredt!}
+			\begin{itemize}
+			\item {Kan gå dybt i detaljerne}
+			\item {Eller behandle i overfalden}
+			\end{itemize}
+		\end{itemize}
+		\end{column}
+		
+		\begin{column}{0.5\textwidth}
+		\begin{center}
+     		\includegraphics[width=0.7\textwidth]{assets/The_C_Programming_Language_logo.png}
+     	\end{center}
+		\end{column}
+		
+	\end{columns}
+\end{frame}
+%%----------------------------------------------------------------------
+\subsection{C's historie}
 
 \begin{frame}{C's historie}
-  Indsæt C's historie her.
+	\begin{columns}
+	
+		\begin{column}{0.5\textwidth}
+		\begin{itemize}
+		\item {C begyndte som så meget andet i Bell Labs}
+			%% Bell Labs er bl.a. ansvarlige for:
+			%% Transistoren
+			%% Laseren
+			%% UNIX, C og C++
+			\begin{itemize}
+			\item{Skabt af Dennis Ritchie} %% Ham til venstre
+			\item{Baseret på B af Ken Thompson} %% Ham til højre
+			%% Basic Combined Programming Language
+			\item{Udviklet til arbejdet på UNIX}
+			\end{itemize}
+		\item {Udviklet af programmører til programmører!}
+		\end{itemize}
+		\end{column}
+		
+		\begin{column}{0.5\textwidth}
+		\begin{center}
+     		\includegraphics[width=0.6\textwidth]{assets/Lucent_HQ.png} 					\break
+     		\break
+     		\includegraphics[width=0.6\textwidth]{assets/Ken_n_dennis.png}
+     	\end{center}
+		\end{column}
+		
+	\end{columns}
+\end{frame}
+%%---------------------------------------------------------------------
 
-  \pause
-
-  The followings are mathematical lists.
-
-  \begin{enumerate}
-  \item Item $1$\pause
-  \item Item $1+1$\pause
-  \item Item $1+1+1$
-  \end{enumerate}
-
-  \pause
-
-  \begin{itemize}
-  \item Item $1+1+1+1$\pause
-  \item Item $1+1+1+1+1$\pause
-  \item Item $1+1+1+1+1+1$
-  \end{itemize}
+\subsection{Eksempler på brug af C}
+\begin{frame}
+	\begin{columns}
+	
+	\begin{column}{0.5\textwidth}
+	\begin{itemize}
+	\item{Kernen til dit Operativsystem er hovedsagligt skrevet i C}
+	\item{C har inspireret mange sprog}
+		\begin{itemize}
+		\item{Java}
+		\item{Swift}
+		\item{Rust}
+		\end{itemize}
+	\item{Compilers og interpreters er ofte skrevet i C!}
+	\item{C bruges i indlejret elektronik i stor stil!}
+	\end{itemize}
+	\end{column}
+	
+	\
+	
+	\end{columns}
 \end{frame}
 
-\begin{frame}{Slide $1+1$}
-  \alert{Get started in writing equations!!!}
-
-  \begin{theorem}[Gaussian integral]
-    The following integral is very well known:
-    \begin{equation}
-      \int_{-\infty}^\infty \mathrm{e}^{-x^2}\,\mathrm{d}x=\sqrt{\pi}.
-    \end{equation}
-
-  \end{theorem}
-\end{frame}
-
-\section{More Mathematical Story}
-\begin{frame}{Slide $1+1+1$}
-\end{frame}
 \end{document}
+
+%%\begin{frame}[fragile]
+	%%\begin{lstlisting}
+		%%#include <stdio.h>
+
+		%%int main(void)
+		%%{
+		%%printf("Hello world\n");
+		%%return 0;
+		%%}
+	%%\end{lstlisting}
+%%\end{frame}

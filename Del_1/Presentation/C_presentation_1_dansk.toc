@@ -1,3 +1,5 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Intro til C}{3}{0}{1}
-\beamer@sectionintoc {2}{More Mathematical Story}{11}{0}{2}
+\beamer@subsectionintoc {1}{1}{Hvad er C?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{C's historie}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Eksempler p\IeC {\r a} brug af C}{5}{0}{1}
