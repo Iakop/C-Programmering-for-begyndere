@@ -20,9 +20,9 @@
 \usepackage{listings}
 \usepackage{color}
 
+\definecolor{link}{HTML}{CF55E3}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
 
 \lstset{frame=tb,
   language=C,
@@ -40,7 +40,8 @@
   stringstyle=\color{C_lightblue},
   breaklines=true,
   breakatwhitespace=true,
-  tabsize=3
+  tabsize=3,
+  extendedchars=true
 }
 
 \usetheme{C_Console}
@@ -343,24 +344,238 @@
 \end{frame}
 
 %%----------------------------------------------------------------------
-\subsection{Eksempel 0 - Hello World}
-\begin{frame}{Eksempel 0 - Hello World}
+\subsection{Eksempel 1 - Hello World}
+\begin{frame}{Eksempel 1 - Hello World}
 	\begin{itemize}
 	\item{Det første program hedder Hello World}
 	\item{Det er en klassiker inden for programmering}
 		\begin{itemize}
 		\item{Første program man laver, så der er hul igennem}
 		\end{itemize}
-	\item{\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_1/Examples/1_Hello_World/}{../Del\_1/Examples/1\_Hello\_World/}}
+	\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_1/Examples/1_Hello_World/main.c}{../Del\_1/Examples/1\_Hello\_World/main.c}}
 	\item{Vi tager den i fællesskab!}
 	\end{itemize}
 \end{frame}
 
 %%----------------------------------------------------------------------
-\begin{frame}{Eksempel 0 - Hello World}[fragile]
+\begin{frame}[fragile]{Eksempel 1 - Hello World}
 	\begin{lstlisting}
+	#include <stdio.h> 
 	
+	int main(int argc, char **argv)
+	{
+		printf("hello world\n");
+		return 0;
+	}
 	\end{lstlisting}
+	\begin{center}
+	Output:
+	\lstset{language=bash, numbers=none}
+	\begin{lstlisting}
+	hello world
+	\end{lstlisting}
+	\end{center}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Eksempel 2 - Datatyper}
+\begin{frame}{Eksempel 2 - Datatyper}
+	\begin{itemize}
+	\item{Vi skal lære forskellen på datatyper i C}
+	\item{Der er en række forskellige:}
+		\begin{itemize}
+		\item{int - heltal/integer}
+		\item{floating - floating point kommatal}
+		\item{char - skrifttegn/character}
+		\item{bool - sand/falsk (implementeret i stdbool.h)}
+		\end{itemize}
+	\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_1/Examples/2_Datatypes/main.c}{../Del\_1/Examples/2\_Datatypes/main.c}}
+	\item{Vi tager den i fællesskab!}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Eksempel 2 - Datatyper}
+	\begin{lstlisting}
+	#include <stdio.h>
+
+	int main(int argc, char **argv)
+	{
+  		int a = 10; //integer
+  		float b = 2.5; //float
+
+		printf("an integer is a whole number. integer 'a' is: %d\n\n",a);
+  		printf("floats can store decimals as well. float 'b' is : %f\n\n",b);
+  		printf("we don't always want that many decimals though! you can adjust that like this %.2f\n\n",b);
+  
+  		char ch = 'A'; //char
+  		printf("a character has several values, the character value is %c, and the integer value is %d\n\n",ch,ch);
+		return 0;
+	}
+	\end{lstlisting}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Eksempel 2 - Datatyper}
+	\lstset{language=bash, numbers=none}
+	\begin{center}
+	Output:
+	\lstset{language=bash, numbers=none}
+	\begin{lstlisting}
+	an integer is a whole number. integer 'a' is: 10
+
+	floats can store decimals as well. float 'b' is : 2.500000
+
+	we don't always want that many decimals though! you can adjust that like this 2.50
+
+	a character has several values, the character value is A, and the integer value is 65
+
+	\end{lstlisting}
+	\end{center}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Eksempel 3 - Matematik med Datatyper}
+\begin{frame}{Eksempel 3 - Matematik med Datatyper}
+	\begin{itemize}
+	\item{Hvordan regnes med de forskellige datatyper?}
+	\item{Vi ser lidt på basal aritmetik}
+		\begin{itemize}
+		\item{Multiplikation}
+		\item{Division}
+		\end{itemize}
+	\item{Og hvordan variablene reagerer}
+	\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_1/Examples/3_Datatype_Math/main.c}{../Del\_1/Examples/3\_Datatype\_Math/main.c}}
+	\item{Vi tager den i fællesskab!}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Eksempel 3 - Matematik med Datatyper}
+	\lstset{basicstyle=\tiny}
+	\begin{lstlisting}
+	#include <stdio.h>
+
+	int main(int argc, char **argv)
+	{
+  		int a = 10;
+  		int b = 3;
+  
+  		printf("A quick way to do maths: %d * %d is %d\n\n", a,b,a*b);
+  		
+  		int c = a * b;
+
+  		printf("displaying the math in varible c: %d * %d is %d\n\n",a,b,c);
+  
+  		c = a / b;
+  
+  		printf("wrong datatypes can cause some problems: %d / %d as en integer result: %d\n\n",a,b,c);
+  
+  		float d = 10;
+  		float e = 3;
+  		float f = d / e;
+  
+  		printf("Now with a float format specifier: %.1f / %.1f as a float result: %.2f\n\n",d,e,f);
+  
+		return 0;
+	}
+	\end{lstlisting}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Eksempel 3 - Matematik med Datatyper}
+	\lstset{language=bash, numbers=none, keywordstyle=\color{whiteee}}
+	\begin{center}
+	Output:
+	\begin{lstlisting}
+	A quick way to do maths: 10 * 3 is 30
+
+	displaying the math in varible c: 10 * 3 is 30
+
+	wrong datatypes can cause some problems: 10 / 3 as en integer result: 3
+
+	Now with a float format specifier: 10.0 / 3.0 as a float result: 3.33
+
+	\end{lstlisting}
+	\end{center}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Eksempel 4 - Input og Output}
+\begin{frame}{Eksempel 4 - Input og Output}
+	\begin{itemize}
+	\item{Vores programmer har været meget ensidige}
+		\begin{itemize}
+		\item{Data har været "hardcoded"}
+		\item{Vi har brug for input!}
+		\end{itemize}
+	\item{scanf() kan afhjælpe dette!}
+		\begin{itemize}
+		\item{Hører til i samme pakke som printf}
+		\item{stdio.h}
+		\end{itemize}
+	\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_1/Examples/4_Input_Output/main.c}{../Del\_1/Examples/4\_Input\_Output/main.c}}
+	\item{Vi tager den i fællesskab!}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Eksempel 4 - Input og Output}
+	\lstset{basicstyle=\tiny}
+	\begin{lstlisting}
+	#include <stdio.h>
+
+	int main(int argc, char **argv)
+	{
+  		float input;
+
+  		printf("Please input a number: "); //print input prompt
+  		scanf("%f",&input); //take float value as input
+  
+  		printf("\nHere is your entered number: %.2f\n\n",input);
+  
+  		float input1;
+  		float input2;
+  		printf("enter two numbers to be multiplied, hit enter after each number:\n");
+  		scanf("%f %f",&input1,&input2);
+
+  		float result = input1 * input2;
+  		printf("result: %.2f * %.2f = %.2f\n\n",input1,input2,result);
+  
+		return 0;
+	}
+	\end{lstlisting}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Eksempel 4 - Input og Output}
+	\lstset{language=bash, numbers=none, keywordstyle=\color{whiteee}}
+	\begin{center}
+	Output:
+	\begin{lstlisting}
+	Please input a number: 3
+
+	Here is your entered number: 3.00
+
+	enter two numbers to be multiplied, hit enter after each number:
+	3
+	3
+	result: 3.00 * 3.00 = 9.00
+	\end{lstlisting}
+	\end{center}
+\end{frame}
+
+\section{Kreative Opgaver}
+%%----------------------------------------------------------------------
+\begin{frame}{Kreative Opgaver}
+	\begin{itemize}
+	\item{Der ligger kreative opgaver tilgængelige:}
+		\begin{itemize}
+		\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_1/Exercises/C_exercises_1_dansk.pdf}{../Del\_1/Exercises/C\_exercises\_1\_dansk.pdf}}
+		\end{itemize}
+	\item{Der er hjælp at hente her på workshoppen}
+	\item{God arbejdslyst! - Happy Hacking!}
+	\end{itemize}
 \end{frame}
 
 \end{document}

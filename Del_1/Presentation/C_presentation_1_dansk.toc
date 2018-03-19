@@ -10,3 +10,7 @@
 \beamer@sectionintoc {4}{\IeC {\O }velseseksempler}{9}{0}{4}
 \beamer@subsectionintoc {4}{1}{Ops\IeC {\ae }tning af CodeLite}{9}{0}{4}
 \beamer@subsectionintoc {4}{2}{Eksempel 1 - Hello World}{10}{0}{4}
+\beamer@subsectionintoc {4}{3}{Eksempel 2 - Datatyper}{12}{0}{4}
+\beamer@subsectionintoc {4}{4}{Eksempel 3 - Matematik med Datatyper}{15}{0}{4}
+\beamer@subsectionintoc {4}{5}{Eksempel 4 - Input og Output}{18}{0}{4}
+\beamer@sectionintoc {5}{Kreative Opgaver}{21}{0}{5}

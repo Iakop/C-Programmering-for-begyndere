@@ -1,56 +1,15 @@
-\frametitle{Et C-programs opbygning}
-\begin{columns}
-	\begin{small}
-	\begin{column}{0.5\textwidth}
-	\begin{itemize}
-	\item{Linje 3:}
-		\begin{itemize}
-		\item{Man kan deklarere variable}
-		\end{itemize}
-	\end{itemize}
-
-	\begin{itemize}
-	\item{Linje 10:}
-		\begin{itemize}
-		\item{Og lægge dem sammen}
-		\end{itemize}
-		\begin{itemize}
-		\item{I en ny variabel}
-		\end{itemize}
-	\end{itemize}
-
-	\begin{itemize}
-	\item{Linje 11:}
-		\begin{itemize}
-		\item{Skrive dem ud, & formateret}
-		\end{itemize}
-	\end{itemize}
-	\end{column}
-	\end{small}
-
-	\begin{column}{0.4\textwidth}
-	\begin{lstlisting}
-	#include <stdio.h>
-
-	int a;
-	int b;
-
-	int main(void)
-	{
-		a = 2;
-		b = 3;
-		int c = a + b;
-		printf("%d + %d = %d\n", a, b, c);
-		return 0;
-	}
-	\end{lstlisting}
-	\end{column}
-
-	\end{columns}
+\frametitle{Eksempel 4 - Input og Output}
+\lstset{language=bash, numbers=none, keywordstyle=\color{whiteee}}
 	\begin{center}
 	Output:
-	\lstset{language=bash, numbers=none}
 	\begin{lstlisting}
-	2 + 3 = 5
+	Please input a number: 3
+
+	Here is your entered number: 3.00
+
+	enter two numbers to be multiplied, hit enter after each number:
+	3
+	3
+	result: 3.00 * 3.00 = 9.00
 	\end{lstlisting}
 	\end{center}
