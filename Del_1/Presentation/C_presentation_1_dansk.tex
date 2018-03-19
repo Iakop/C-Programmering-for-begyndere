@@ -31,17 +31,19 @@
   showstringspaces=false,
   columns=flexible,
   basicstyle={\small\ttfamily},
-  numbers=none,
+  numbers=left,
+  numbersep=0pt,
+  keywordsprefix={\#, \<},
   numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
+  keywordstyle=\color{C_darkblue},
   commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
+  stringstyle=\color{C_lightblue},
   breaklines=true,
   breakatwhitespace=true,
   tabsize=3
 }
 
-\usetheme{DarkConsole}
+\usetheme{C_Console}
 \title{C-Programmering for begyndere}
 \subtitle{Del 1 - Hello World, Datatyper, Matematik og I/O}
 \author{Jacob B. Pedersen\footnote{jacob.bp@mvb.net} og Jakob S. Nielsen\footnote{indsæt mail her}}
@@ -55,6 +57,51 @@
 
 \begin{frame}{Indhold}
 	\tableofcontents
+\end{frame}
+
+\section{Jeres undervisere}
+%%----------------------------------------------------------------------
+\subsection{Hvem er vi?}
+
+\begin{frame}{Hvem er vi?}
+	\begin{columns}
+
+		\begin{column}{0.5\textwidth}
+		\begin{center}
+			\includegraphics[width=0.4\textwidth]{assets/jacob_bp.png}
+		\end{center}
+		\begin{itemize}
+		\item{Jacob Bechmann Pedersen}
+			\begin{itemize}
+			\item{Læser Elektronikingeniør}
+			\item{6. Semester}
+			\end{itemize}
+		\item{Direkte fra HTX}
+		\item{Startet egen virksomhed}
+			\begin{itemize}
+			\item{Bechmann \& Vang - Med fokus på elektroniske musikinstrumenter}
+			\end{itemize}
+		\item{Holder også Arduino workshops}
+		\end{itemize}
+		\end{column}
+		
+		\begin{column}{0.5\textwidth}
+		\begin{center}
+			\includegraphics[width=0.4\textwidth]{assets/jakob_sn.jpg}
+		\end{center}
+		\begin{itemize}
+		\item{Jakob Skjødt Nielsen}
+			\begin{itemize}
+			\item{Læser Elektronikingeniør}
+			\item{2. Semester}
+			\end{itemize}
+		\item{Elektronikfagtekniker ved B\&O}
+		\item{Osv.}
+		\item{Osv.}
+		\end{itemize}
+		\end{column}
+		
+	\end{columns}
 \end{frame}
 
 \section{Intro til C}
@@ -124,7 +171,7 @@
 %%---------------------------------------------------------------------
 
 \subsection{Eksempler på brug af C}
-\begin{frame}
+\begin{frame}{Eksempler på brug af C}
 	\begin{columns}
 	
 	\begin{column}{0.5\textwidth}
@@ -132,18 +179,176 @@
 	\item{Kernen til dit Operativsystem er hovedsagligt skrevet i C}
 	\item{C har inspireret mange sprog}
 		\begin{itemize}
-		\item{Java}
 		\item{Swift}
-		\item{Rust}
+		\item{Java}
+		\item{PHP}
+		\item{R}
 		\end{itemize}
 	\item{Compilers og interpreters er ofte skrevet i C!}
 	\item{C bruges i indlejret elektronik i stor stil!}
 	\end{itemize}
 	\end{column}
 	
-	\
+	\begin{column}{0.5\textwidth}
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{assets/windows-kernel.png}
+		\break
+		\includegraphics[width=0.7\textwidth]{assets/C-derivatives.png}
+	\end{center}
+	\end{column}
 	
 	\end{columns}
+\end{frame}
+
+\section{Et C-programs opbygning}
+%%----------------------------------------------------------------------
+\subsection{Et C-programs opbygning}
+\begin{frame}[fragile]{Et C-programs opbygning}
+	\begin{columns}
+	
+	\begin{column}{0.5\textwidth}
+	
+	\begin{itemize}
+	\item{Linje 3:}
+		\begin{itemize}
+		\item{\bf{main()} er & hovedfunktionen}
+		\end{itemize}
+	\end{itemize}
+	
+	\begin{itemize}
+	\item{Linje 6:}
+		\begin{itemize}
+		\item{Funktioner "returnerer" & ofte status til sidst}
+		\end{itemize}
+	\end{itemize}
+	
+	\begin{itemize}
+	\item{Linje 1:}
+		\begin{itemize}
+		\item{Libraries med standardkomponenter}
+		\end{itemize}
+	\end{itemize}
+	
+	\begin{itemize}
+	\item{Linje 5:}
+		\begin{itemize}
+		\item{printf() er en af dem. & Den skriver til konsollen}
+		\end{itemize}
+	\end{itemize}
+	
+	\end{column}
+	
+	\begin{column}{0.4\textwidth}
+	\begin{lstlisting}
+	#include <stdio.h>
+
+	int main(void)
+	{
+		printf("Hello world\n");
+		return 0;
+	}
+	\end{lstlisting}
+	\end{column}
+	
+	\end{columns}
+	
+	\begin{center}
+	Output:
+	\lstset{language=bash, numbers=none}
+	\begin{lstlisting}
+	Hello world
+	\end{lstlisting}
+	\end{center}
+
+\end{frame}
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Et C-programs opbygning}
+	\begin{columns}
+	\begin{small}
+	\begin{column}{0.5\textwidth}
+	\begin{itemize}
+	\item{Linje 3:}
+		\begin{itemize}
+		\item{Man kan deklarere variable}
+		\end{itemize}
+	\end{itemize}
+	
+	\begin{itemize}
+	\item{Linje 10:}
+		\begin{itemize}
+		\item{Og lægge dem sammen}
+		\end{itemize}
+		\begin{itemize}
+		\item{I en ny variabel}
+		\end{itemize}
+	\end{itemize}
+	
+	\begin{itemize}
+	\item{Linje 11:}
+		\begin{itemize}
+		\item{Skrive dem ud, & formateret}
+		\end{itemize}
+	\end{itemize}
+	\end{column}
+	\end{small}
+	
+	\begin{column}{0.4\textwidth}
+	\begin{lstlisting}
+	#include <stdio.h>
+	
+	int a;
+	int b;	
+	
+	int main(void)
+	{
+		a = 2;
+		b = 3;
+		int c = a + b;
+		printf("%d + %d = %d\n", a, b, c);
+		return 0;
+	}
+	\end{lstlisting}
+	\end{column}
+	
+	\end{columns}
+	\begin{center}
+	Output:
+	\lstset{language=bash, numbers=none}
+	\begin{lstlisting}
+	2 + 3 = 5 
+	\end{lstlisting}
+	\end{center}
+\end{frame}
+
+\section{Øvelseseksempler}
+%%----------------------------------------------------------------------
+\subsection{Opsætning af CodeLite}
+\begin{frame}{Opsætning af CodeLite}
+	\begin{itemize}
+	\item{Nu skal vi have opsat CodeLite}
+	\begin{itemize}
+		\item{\url{https://downloads.codelite.org/}}
+		\end{itemize}
+	\item{Hvad man kalder et IDE}
+		\begin{itemize}
+		\item{Integrated Development Environment}
+		\end{itemize}
+	\item{Det gør vi live!}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Eksempel 1 - Hello World}
+\begin{frame}{Eksempel 1 - Hello World}
+	\begin{itemize}
+	\item{Det første program hedder Hello World}
+	\item{Det er en klassiker inden for programmering}
+		\begin{itemize}
+		\item{Første program man laver, så der er hul igennem}
+		\end{itemize}
+	\end{itemize}
+	\
+	\item{Vi tager den i fællesskab!}
 \end{frame}
 
 \end{document}

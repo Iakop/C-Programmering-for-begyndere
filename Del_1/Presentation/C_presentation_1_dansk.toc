@@ -1,5 +1,12 @@
 \beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Intro til C}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Hvad er C?}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{C's historie}{4}{0}{1}
-\beamer@subsectionintoc {1}{3}{Eksempler p\IeC {\r a} brug af C}{5}{0}{1}
+\beamer@sectionintoc {1}{Jeres undervisere}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Hvem er vi?}{3}{0}{1}
+\beamer@sectionintoc {2}{Intro til C}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Hvad er C?}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{C's historie}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Eksempler p\IeC {\r a} brug af C}{6}{0}{2}
+\beamer@sectionintoc {3}{Et C-programs opbygning}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Et C-programs opbygning}{7}{0}{3}
+\beamer@sectionintoc {4}{\IeC {\O }velseseksempler}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{Ops\IeC {\ae }tning af CodeLite}{9}{0}{4}
+\beamer@subsectionintoc {4}{2}{Eksempel 1 - Hello World}{10}{0}{4}

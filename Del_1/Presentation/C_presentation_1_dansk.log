@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  18 MAR 2018 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  19 MAR 2018 13:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1044,11 +1044,11 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(/home/iakop/texmf/tex/beamer/kmbeamer/beamerthemeDarkConsole.sty
-Package: beamerthemeDarkConsole 2013/05/16 
+(/home/iakop/texmf/tex/beamer/iakopbeamer/beamerthemeC_Console.sty
+Package: beamerthemeC_Console 2013/05/16 
 
-(/home/iakop/texmf/tex/beamer/kmbeamer/kmbeamer_common.sty
-Package: kmbeamer_common 2012/04/20 
+(/home/iakop/texmf/tex/beamer/iakopbeamer/iakopbeamer_common.sty
+Package: iakopbeamer_common 2012/04/20 
 \kmbmr@tmpboxa=\box55
 \kmbmr@tmpboxb=\box56
 
@@ -1057,88 +1057,88 @@ essionalfonts.sty
 Package: beamerfontthemeprofessionalfonts 2010/06/17  (rcs-revision d02a7cf4d8a
 e)
 ))
-(/home/iakop/texmf/tex/beamer/kmbeamer/beamercolorthemeDarkConsole.sty
-Package: beamercolorthemeDarkConsole 2013/05/08 
+(/home/iakop/texmf/tex/beamer/iakopbeamer/beamercolorthemeC_Console.sty
+Package: beamercolorthemeC_Console 2013/05/08 
 
-(/home/iakop/texmf/tex/beamer/kmbeamer/kmbeamer_color.sty
-Package: kmbeamer_color 2017/01/01 
+(/home/iakop/texmf/tex/beamer/iakopbeamer/iakopbeamer_color.sty
+Package: iakopbeamer_color 2017/01/01 
 
 (/usr/share/texlive/texmf-dist/tex/latex/svgcolor/svgcolor.sty
 Package: svgcolor 2006/12/20 v1.0 (M. A. Caprio)
 ))))
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\long' on input line 47.
+(hyperref)                removing `\long' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 47.
+(hyperref)                removing `\<def>-command' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@todo' on input line 47.
+(hyperref)                removing `\beamer@todo' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 47.
+(hyperref)                removing `\<def>-command' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@ospec' on input line 47.
+(hyperref)                removing `\beamer@ospec' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@argscount' on input line 47.
+(hyperref)                removing `\beamer@argscount' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 47.
+(hyperref)                removing `\@ifnextchar' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\long' on input line 47.
+(hyperref)                removing `\long' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 47.
+(hyperref)                removing `\<def>-command' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@todo' on input line 47.
+(hyperref)                removing `\beamer@todo' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 47.
+(hyperref)                removing `\<def>-command' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@ospec' on input line 47.
+(hyperref)                removing `\beamer@ospec' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@argscount' on input line 47.
+(hyperref)                removing `\beamer@argscount' on input line 49.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 47.
+(hyperref)                removing `\@ifnextchar' on input line 49.
 
 (./C_presentation_1_dansk.aux)
 \openout1 = `C_presentation_1_dansk.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1204,7 +1204,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 50.
+Package hyperref Info: Link coloring OFF on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1214,9 +1214,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count167
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
 
 (./C_presentation_1_dansk.out) (./C_presentation_1_dansk.out)
 \@outlinefile=\write5
@@ -1247,36 +1247,36 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 50.
+LaTeX Info: Redefining \includegraphics on input line 52.
 \c@lstlisting=\count168
 
 (./C_presentation_1_dansk.nav)
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <5> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 50.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 54.
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 56.
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 56.
 
-LaTeX Font Info:    No file OMScmtt.fd. on input line 54.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 56.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textdagger' on input line 54.
+(Font)              for symbol `textdagger' on input line 56.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 54.
+(Font)              size <5> substituted on input line 56.
 
 [1
 
@@ -1284,35 +1284,149 @@ LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4> not available
 (./C_presentation_1_dansk.toc) [2
 
 ]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 90.
+<assets/jacob_bp.png, id=85, 453.695pt x 450.68375pt>
+File: assets/jacob_bp.png Graphic file (type png)
 
-<assets/The_C_Programming_Language_logo.png, id=46, 733.74126pt x 779.91376pt>
+<use assets/jacob_bp.png>
+Package pdftex.def Info: assets/jacob_bp.png used on input line 105.
+(pdftex.def)             Requested size: 70.56177pt x 70.08907pt.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 105.
+ <assets/jakob_sn.jpg, id=87, 963.6pt x 963.6pt>
+File: assets/jakob_sn.jpg Graphic file (type jpg)
+
+<use assets/jakob_sn.jpg>
+Package pdftex.def Info: assets/jakob_sn.jpg used on input line 105.
+(pdftex.def)             Requested size: 70.56177pt x 70.5613pt.
+
+Overfull \vbox (4.98967pt too high) detected at line 105
+ []
+
+[3
+
+ <./assets/jacob_bp.png> <./assets/jakob_sn.jpg>]
+<assets/The_C_Programming_Language_logo.png, id=94, 733.74126pt x 779.91376pt>
 File: assets/The_C_Programming_Language_logo.png Graphic file (type png)
 
 <use assets/The_C_Programming_Language_logo.png>
 Package pdftex.def Info: assets/The_C_Programming_Language_logo.png used on inp
-ut line 90.
+ut line 137.
 (pdftex.def)             Requested size: 123.48445pt x 131.25072pt.
- [3
+ [4
 
- <./assets/The_C_Programming_Language_logo.png>] <assets/Lucent_HQ.png, id=54, 
-1284.8pt x 1027.84pt>
+ <./assets/The_C_Programming_Language_logo.png>] <assets/Lucent_HQ.png, id=101,
+ 1284.8pt x 1027.84pt>
 File: assets/Lucent_HQ.png Graphic file (type png)
 
 <use assets/Lucent_HQ.png>
-Package pdftex.def Info: assets/Lucent_HQ.png used on input line 123.
+Package pdftex.def Info: assets/Lucent_HQ.png used on input line 170.
 (pdftex.def)             Requested size: 105.84535pt x 84.6755pt.
 
-<assets/Ken_n_dennis.png, id=55, 298.716pt x 193.6836pt>
+<assets/Ken_n_dennis.png, id=102, 298.716pt x 193.6836pt>
 File: assets/Ken_n_dennis.png Graphic file (type png)
 
 <use assets/Ken_n_dennis.png>
-Package pdftex.def Info: assets/Ken_n_dennis.png used on input line 123.
+Package pdftex.def Info: assets/Ken_n_dennis.png used on input line 170.
 (pdftex.def)             Requested size: 105.84535pt x 68.6296pt.
- [4
+ [5
 
- <./assets/Lucent_HQ.png> <./assets/Ken_n_dennis.png>] [5
+ <./assets/Lucent_HQ.png> <./assets/Ken_n_dennis.png>] <assets/windows-kernel.p
+ng, id=110, 406.51875pt x 142.5325pt>
+File: assets/windows-kernel.png Graphic file (type png)
+
+<use assets/windows-kernel.png>
+Package pdftex.def Info: assets/windows-kernel.png used on input line 201.
+(pdftex.def)             Requested size: 123.48445pt x 43.29509pt.
+
+<assets/C-derivatives.png, id=111, 787.94376pt x 757.83125pt>
+File: assets/C-derivatives.png Graphic file (type png)
+
+<use assets/C-derivatives.png>
+Package pdftex.def Info: assets/C-derivatives.png used on input line 201.
+(pdftex.def)             Requested size: 123.48445pt x 118.75775pt.
+ [6
+
+ <./assets/windows-kernel.png (PNG copy)> <./assets/C-derivatives.png>]
+\openout4 = `C_presentation_1_dansk.vrb'.
+
+ (./C_presentation_1_dansk.vrb
+! Misplaced alignment tab character &.
+l.9 		\item{\bf{main()} er &
+                             hovedfunktionen}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.16 		\item{Funktioner "returnerer" &
+                                       ofte status til sidst}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.30 		\item{printf() er en af dem. &
+                                      Den skriver til konsollen}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+))
+Overfull \vbox (22.66386pt too high) detected at line 263
+ []
+
+[7
+
+]
+\openout4 = `C_presentation_1_dansk.vrb'.
+
+ (./C_presentation_1_dansk.vrb
+! Misplaced alignment tab character &.
+l.25 		\item{Skrive dem ud, &
+                              formateret}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+)
+Overfull \vbox (21.53548pt too high) detected at line 321
+ []
+
+[8
+
+] [9
+
+]
+! Misplaced alignment tab character &.
+\beamer@doifinframe ...Første program man laver &
+                                                   Så der er hul igennem} \...
+l.350 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[10
 
 ]
 \tf@nav=\write6
@@ -1324,11 +1438,11 @@ Package pdftex.def Info: assets/Ken_n_dennis.png used on input line 123.
 \tf@snm=\write8
 \openout8 = `C_presentation_1_dansk.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 352.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 352.
  (./C_presentation_1_dansk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 352.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 352.
 
 
 Package rerunfilecheck Warning: File `C_presentation_1_dansk.out' has changed.
@@ -1336,8 +1450,8 @@ Package rerunfilecheck Warning: File `C_presentation_1_dansk.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `C_presentation_1_dansk.out':
-(rerunfilecheck)             Before: CB5BA61C8254ACF77CE86F0AC3C28950;166
-(rerunfilecheck)             After:  5CA6CE5CF5C88037602E02E7703D0F99;240.
+(rerunfilecheck)             Before: 540E4A89B912BAA3C45AFDC41FEB5B48;610
+(rerunfilecheck)             After:  0953EB2D3FDEB3C5B5E9D3520FBD801B;685.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1345,25 +1459,25 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 352.
  ) 
 Here is how much of TeX's memory you used:
- 18472 strings out of 493029
- 343777 string characters out of 6136235
- 431247 words of memory out of 5000000
- 21547 multiletter control sequences out of 15000+600000
- 11790 words of font info for 48 fonts, out of 8000000 for 9000
+ 18991 strings out of 493029
+ 349008 string characters out of 6136235
+ 479740 words of memory out of 5000000
+ 22035 multiletter control sequences out of 15000+600000
+ 12844 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,11n,63p,402b,636s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,11n,63p,402b,1544s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on C_presentation_1_dansk.pdf (5 pages, 415786 bytes).
+Output written on C_presentation_1_dansk.pdf (10 pages, 1130932 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

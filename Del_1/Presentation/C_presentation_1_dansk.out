@@ -1,4 +1,11 @@
-\BOOKMARK [2][]{Outline0.1}{Intro til C}{}% 1
-\BOOKMARK [3][]{Outline0.1.1.3}{Hvad er C?}{Outline0.1}% 2
-\BOOKMARK [3][]{Outline0.1.2.4}{C's historie}{Outline0.1}% 3
-\BOOKMARK [3][]{Outline0.1.3.5}{Eksempler p\345 brug af C}{Outline0.1}% 4
+\BOOKMARK [2][]{Outline0.1}{Jeres undervisere}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.3}{Hvem er vi?}{Outline0.1}% 2
+\BOOKMARK [2][]{Outline0.2}{Intro til C}{}% 3
+\BOOKMARK [3][]{Outline0.2.1.4}{Hvad er C?}{Outline0.2}% 4
+\BOOKMARK [3][]{Outline0.2.2.5}{C's historie}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.3.6}{Eksempler p\345 brug af C}{Outline0.2}% 6
+\BOOKMARK [2][]{Outline0.3}{Et C-programs opbygning}{}% 7
+\BOOKMARK [3][]{Outline0.3.1.7}{Et C-programs opbygning}{Outline0.3}% 8
+\BOOKMARK [2][]{Outline0.4}{\330velseseksempler}{}% 9
+\BOOKMARK [3][]{Outline0.4.1.9}{Ops\346tning af CodeLite}{Outline0.4}% 10
+\BOOKMARK [3][]{Outline0.4.2.10}{Eksempel 1 - Hello World}{Outline0.4}% 11
