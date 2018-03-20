@@ -1,0 +1,67 @@
+\documentclass[hidelinks]{article} % Class of the document. Article is used for most reports.
+
+% Packages - Use as seen fit.
+\usepackage{amsmath} % Advanced math typesetting
+%\usepackage[ngerman]{babel} % Change hyphenation rules
+\usepackage{hyperref} % Add a link to your document
+\usepackage{graphicx} % Add pictures to your document
+\usepackage{listings} % Source code formatting and highlighting
+\usepackage[utf8]{inputenc} % Gives UTF-8 encoded characters such as Æ, Ø, Å.
+\usepackage{a4wide} % Widens the formatting to fit on standard A4 pages.
+\usepackage{fancyhdr} % For headers and footers
+\usepackage{lastpage} % For getting the last page number.
+
+% Title page info.
+\title{C-programmering for begyndere - Del 1
+ 		\break
+ 		\break
+		\large Øvelser} % Title of the document.
+\date{d. 9. april 2018} % Date of the document.
+\author{Jacob B. Pedersen \break \& \break Jakob S Nielsen} % My name, the author. 
+
+\pagestyle{fancy}
+\lhead{Jacob B. Pedersen \& Jakob S Nielsen}
+\chead{2018-04-09}
+\rhead{[Organisation]}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+
+	%%\begin{titlepage}
+	%%\pagenumbering{gobble} % Removes page numbering on front page.
+  	%%\maketitle % Generates the title, author and date.
+  	%%\end{titlepage}
+  	%%\newpage % Generates a new page.
+  	%%\begin{titlepage}
+  		%%\renewcommand{\contentsname}{Indhold} % Change the title of Contents.
+  		%%\tableofcontents % Generates a table of contents.
+  	%%\end{titlepage}
+  	%%\newpage % Generates a new page.
+  	\pagenumbering{arabic} % Sætter sidenummerering til igen, med arabiske tal.
+
+	\section{Skriv en Fødselsårsomregner}
+Uden at tage hensyn til skudår, skriv et program, hvor en variabel rerpæsenterer dit fødselsår, og et andet repræsenterer omregningen fra år til dage.
+
+De kunne evt. hedde noget retvisende som 
+\begin{verbatim}birthyear
+\end{verbatim}
+og
+\begin{verbatim}yearAsDays
+\end{verbatim}
+
+Få programmet til at printe resultatet til konsollen. Eventuelt med en lille besked inden:
+
+\begin{verbatim}Your age in days is: <days>
+\end{verbatim}
+
+	\subsection{scanf() input}
+Få dit nye program til at tage input gennem konsollen, og lægge dette input i dine variable, så den kan omregnes.
+
+	\section{Omregn kropsmål til BMI}
+Skriv dine 
+
+\end{document}
+
+
