@@ -60,8 +60,54 @@ Få programmet til at printe resultatet til konsollen. Eventuelt med en lille be
 Få dit nye program til at tage input gennem konsollen, og lægge dette input i dine variable, så den kan omregnes.
 
 	\section{Omregn kropsmål til BMI}
-Skriv dine 
+Skriv et program, der tager input i form af kropsparametrene til en BMI udregning. De er som følger:
+\begin{verbatim}[vægt i kg]/[højde i m]^2
+\end{verbatim}
 
+Brug scanf() til at behandle inputtet. Og skriv det derefter ud med printf().
+
+	\section{Konverter mellem enheder}
+Du står og har brug for at kende et centimetermål i tommer. Derfor beslutter du dig for at skrive et program, der kan konvertere mellem disse to enheder:
+
+1 cm er lig med 0.3937008 tommer.
+
+Der bliver altså brug for en float repræsentation af tallene.
+Prøv først at skrive målet direkte ind i programmet.
+
+	\subsection{Tag input}
+Udvid nu programmet til at tage mod input vha. scanf().
+
+	\subsection{Beregn flere enheder}
+Udvid programmet med nogle flere enheder at konvertere imellem. lidt inspiration:
+
+\begin{itemize}
+	\item{liter til oz.}
+	\item{spiseskefuld til teskefuld}
+	\item{kg til pund}
+	\item{DKK til USD}
+	\item{Celsius til Fahrenheit}
+	\item{km/t til mph}
+\end{itemize}
+
+Brugeren skal indtaste et input til hver af målene.
+
+	\section{Præsentér dig selv}
+Du vil gerne introducere dig over for nye kolleger/klassekammerater på en kreativ måde, så du skriver et program, de kan køre for at høre om dig.
+
+Du vil programmere dit navn end som en
+\begin{verbatim} char array[]
+\end{verbatim}
+Så hele navnet kan printes ud med printf() og format specifieren \%s.
+Lidt ligesom:
+\begin{verbatim}
+	Hej, mit navn er [navn].
+	Mine interesser er bl.a. [interesse1] og [interesse2].
+	Jeg studerer/arbejder på [sted], som [studie/erhverv].
+	
+	Rart at møde dig!
+\end{verbatim}
+	\subsection{Tag input}
+	Implementér nu input vha. scanf, så du kan skrive dit navn ind, og så få linjen ud med det indsat. Du kan også prompte brugeren for at skulle trykke [enter] for at komme videre i teksten.
 \end{document}
 
 
