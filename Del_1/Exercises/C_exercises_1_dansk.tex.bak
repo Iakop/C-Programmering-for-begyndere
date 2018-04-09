@@ -66,16 +66,6 @@ Skriv et program, der tager input i form af kropsparametrene til en BMI udregnin
 
 Brug scanf() til at behandle inputtet. Og skriv det derefter ud med printf().
 
-Tip: Hvis du vil beregne potenser, kan du bruge funktionen:
-\begin{verbatim} pow(x,y) 
-\end{verbatim}
-Den tager tallet som input x, og potensen som input y og giver resultatet som returværdi.
-du får den ved at skrive:
-\begin{verbatim}
-#include <math.h>
-\end{verbatim}
-i starten af dokumentet.
-
 	\section{Konverter mellem enheder}
 Du står og har brug for at kende et centimetermål i tommer. Derfor beslutter du dig for at skrive et program, der kan konvertere mellem disse to enheder:
 

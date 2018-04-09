@@ -94,7 +94,7 @@
 			\item{Læser Elektronikingeniør}
 			\item{2. Semester}
 			\end{itemize}
-		\item{Elektronik-fagtekniker ved B\&O}
+		\item{Elektronikfagtekniker ved B\&O}
 		\item{Teknisk designer}
 		\end{itemize}
 		\end{column}
@@ -116,7 +116,7 @@
 			\item{Fylder meget lidt plads}
 			\item{Kører meget stærkt!}
 			\end{itemize}
-		\item {Kompatibelt og portabel til de fleste systemer}
+		\item {Kompatibelt og portabelt til de fleste systemer}
 		\item {Kan bruges bredt!}
 			\begin{itemize}
 			\item {Kan gå dybt i detaljerne}
@@ -179,7 +179,7 @@
 	
 	\begin{column}{0.5\textwidth}
 	\begin{itemize}
-	\item{Kernen til dit Operativsystem er hovedsageligt skrevet i C}
+	\item{Kernen til dit Operativsystem er hovedsagligt skrevet i C}
 	\item{C har inspireret mange sprog}
 		\begin{itemize}
 		\item{Swift}
