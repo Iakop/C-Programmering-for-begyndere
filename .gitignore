@@ -11,3 +11,4 @@ Noter-og-tanker.odt
 *.aux
 *.tex.bak
 *.odt
+*.~lock.*.odt#
