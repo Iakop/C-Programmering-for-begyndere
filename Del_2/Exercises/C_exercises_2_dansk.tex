@@ -1,0 +1,123 @@
+\documentclass[hidelinks]{article} % Class of the document. Article is used for most reports.
+
+% Packages - Use as seen fit.
+\usepackage{amsmath} % Advanced math typesetting
+%\usepackage[ngerman]{babel} % Change hyphenation rules
+\usepackage{hyperref} % Add a link to your document
+\usepackage{graphicx} % Add pictures to your document
+\usepackage{listings} % Source code formatting and highlighting
+\usepackage[utf8]{inputenc} % Gives UTF-8 encoded characters such as Æ, Ø, Å.
+\usepackage{a4wide} % Widens the formatting to fit on standard A4 pages.
+\usepackage{fancyhdr} % For headers and footers
+\usepackage{lastpage} % For getting the last page number.
+
+% Title page info.
+\title{C-programmering for begyndere - Del 1
+ 		\break
+ 		\break
+		\large Øvelser} % Title of the document.
+\date{d. 9. april 2018} % Date of the document.
+\author{Jacob B. Pedersen \break \& \break Jakob S Nielsen} % My name, the author. 
+
+\pagestyle{fancy}
+\lhead{Jacob B. Pedersen \& Jakob S Nielsen}
+\chead{2018-04-09}
+\rhead{IDA AU Herning}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+
+	%%\begin{titlepage}
+	%%\pagenumbering{gobble} % Removes page numbering on front page.
+  	%%\maketitle % Generates the title, author and date.
+  	%%\end{titlepage}
+  	%%\newpage % Generates a new page.
+  	%%\begin{titlepage}
+  		%%\renewcommand{\contentsname}{Indhold} % Change the title of Contents.
+  		%%\tableofcontents % Generates a table of contents.
+  	%%\end{titlepage}
+  	%%\newpage % Generates a new page.
+  	\pagenumbering{arabic} % Sætter sidenummerering til igen, med arabiske tal.
+
+	\section{Skriv en Fødselsårsomregner}
+Uden at tage hensyn til skudår, skriv et program, hvor en variabel rerpæsenterer dit fødselsår, og et andet repræsenterer omregningen fra år til dage.
+
+De kunne evt. hedde noget retvisende som 
+\begin{verbatim}birthyear
+\end{verbatim}
+og
+\begin{verbatim}yearAsDays
+\end{verbatim}
+
+Få programmet til at printe resultatet til konsollen. Eventuelt med en lille besked inden:
+
+\begin{verbatim}Your age in days is: <days>
+\end{verbatim}
+
+	\subsection{scanf() input}
+Få dit nye program til at tage input gennem konsollen, og lægge dette input i dine variable, så den kan omregnes.
+
+	\section{Omregn kropsmål til BMI}
+Skriv et program, der tager input i form af kropsparametrene til en BMI udregning. De er som følger:
+\begin{verbatim}[vægt i kg]/[højde i m]^2
+\end{verbatim}
+
+Brug scanf() til at behandle inputtet. Og skriv det derefter ud med printf().
+
+Tip: Hvis du vil beregne potenser, kan du bruge funktionen:
+\begin{verbatim} pow(x,y) 
+\end{verbatim}
+Den tager tallet som input x, og potensen som input y og giver resultatet som returværdi.
+du får den ved at skrive:
+\begin{verbatim}
+#include <math.h>
+\end{verbatim}
+i starten af dokumentet.
+
+	\section{Konverter mellem enheder}
+Du står og har brug for at kende et centimetermål i tommer. Derfor beslutter du dig for at skrive et program, der kan konvertere mellem disse to enheder:
+
+1 cm er lig med 0.3937008 tommer.
+
+Der bliver altså brug for en float repræsentation af tallene.
+Prøv først at skrive målet direkte ind i programmet.
+
+	\subsection{Tag input}
+Udvid nu programmet til at tage mod input vha. scanf().
+
+	\subsection{Beregn flere enheder}
+Udvid programmet med nogle flere enheder at konvertere imellem. lidt inspiration:
+
+\begin{itemize}
+	\item{liter til oz.}
+	\item{spiseskefuld til teskefuld}
+	\item{kg til pund}
+	\item{DKK til USD}
+	\item{Celsius til Fahrenheit}
+	\item{km/t til mph}
+\end{itemize}
+
+Brugeren skal indtaste et input til hver af målene.
+
+	\section{Præsentér dig selv}
+Du vil gerne introducere dig over for nye kolleger/klassekammerater på en kreativ måde, så du skriver et program, de kan køre for at høre om dig.
+
+Du vil programmere dit navn end som en
+\begin{verbatim} char array[]
+\end{verbatim}
+Så hele navnet kan printes ud med printf() og format specifieren \%s.
+Lidt ligesom:
+\begin{verbatim}
+	Hej, mit navn er [navn].
+	Mine interesser er bl.a. [interesse1] og [interesse2].
+	Jeg studerer/arbejder på [sted], som [studie/erhverv].
+	
+	Rart at møde dig!
+\end{verbatim}
+	\subsection{Tag input}
+	Implementér nu input vha. scanf, så du kan skrive dit navn ind, og så få linjen ud med det indsat. Du kan også prompte brugeren for at skulle trykke [enter] for at komme videre i teksten.
+\end{document}
+
+
