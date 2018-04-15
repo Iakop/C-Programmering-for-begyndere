@@ -16,6 +16,7 @@ Workshoppen er 4-delt, og kommer til at indeholde følgende emner:
   - Forgreninger – If-else statements, switch
 
 ## Del 3:
+  - Egne funktioner - argumenter, returværdier, rekursion
   - Lister og datastrukturer – arrays, structs, enums
   - Pointers – hvad betyder de? Og hvordan bruger vi dem?
 
