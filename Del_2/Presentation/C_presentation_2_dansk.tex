@@ -24,6 +24,7 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 
 \lstset{frame=tb,
+  inputencoding=utf8,
   language=C,
   aboveskip=3mm,
   belowskip=3mm,
@@ -40,7 +41,8 @@
   breaklines=true,
   breakatwhitespace=true,
   tabsize=3,
-  extendedchars=true
+  extendedchars=true,
+  literate={æ}{{\ae}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Æ}{{\AE}}1 {Ø}{{\O}}1 {Å}{{\r A}}1,
 }
 
 \usetheme{C_Console}
@@ -167,12 +169,223 @@
 \end{frame}
 
 \section{I dag}
+%%----------------------------------------------------------------------
+\subsection{Dagens program}
+
+\begin{frame}[fragile]{Dagens program}
+	\begin{itemize}
+		\item{I dag vil vi kigger på følgende:}
+		\item{Operatorer}
+		\begin{itemize}
+			\item{{\color{dkgreen}<}, {\color{dkgreen}>}, {\color{dkgreen}==}, {\color{dkgreen}!=}, {\color{dkgreen}\&\&}, {\color{dkgreen}||}, {\color{dkgreen}++}, {\color{dkgreen}--}}
+		\end{itemize}
+		\item{If-else udtryk}
+		\begin{itemize}
+			\item{{\color{C_darkblue}if}(), {\color{C_darkblue}else if}(), {\color{C_darkblue}else}()}
+		\end{itemize}
+		\item{Løkker}
+		\begin{itemize}
+			\item{{\color{C_darkblue}while}(), {\color{C_darkblue}for}()}
+		\end{itemize}
+		\item{Switch-cases}
+		\begin{itemize}
+			\item{{\color{C_darkblue}switch}()}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Operatorer}
+
+\begin{frame}[fragile]{Operatorer}
+	\begin{itemize}
+		\item{Vi kender allerede de basale, vi brugte til udregninger mm.}
+		\begin{itemize}
+			\item{{\color{dkgreen}+}, {\color{dkgreen}-}, {\color{dkgreen}*}, {\color{dkgreen}/}}
+			\item{{\color{dkgreen}=}, {\color{dkgreen}!}}
+		\end{itemize}
+		\item{Men vi har også brug for at sammenligne værdier}
+		\item{Vi kender det f.eks. fra ligninger og uligheder}
+		\begin{itemize}
+			\item{{\color{dkgreen}>}, {\color{dkgreen}<}, {\color{dkgreen}>=}, {\color{dkgreen}<=}}
+		\end{itemize}
+		\item{Når C ser dette:}
+		\begin{lstlisting}
+		12 > 10
+		\end{lstlisting}
+		\item{Erstattes det med en Boolsk værdi (sandt eller falsk):}
+		\begin{lstlisting}
+		true
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Operatorer}
+	\begin{itemize}
+		\item{Hvilke operatorer har vi så?}
+		\begin{lstlisting}
+		== // Lighed - er værdierne lig hinanden?
+		!= // Ikke lig - er værdierne forskellige?
+		> // Større - Er værdien til venstre større?
+		< // Mindre - Er værdien til venstre mindre?
+		>= // Større/lig - Er værdien til venstre større/lig?
+		<= // Mindrel/lig - Er værdien til venstre mindre/lig?
+		|| // Or - Bruges til at samle udtryk (er A > B ELLER er C > B)
+		&& // And - Bruges til at samle udtryk (er A > B OG er C > B)
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Operatorer}
+	\begin{itemize}
+		\item{Foruden sammenligningerne er der også et ekstra sæt fikse operatorer til aritmetik og tilskrivning:}
+		\begin{lstlisting}
+		+= // Tilskriver venstrehåndsværdien dens egen + højrehåndsværdien
+		-= // Tilskriver venstrehåndsværdien dens egen - højrehåndsværdien
+		++ // Inkrementerer en variabel eks:
+			i++; // Evaluerer i, og inkrementerer med én efter
+			++i; // Inkrementerer først, og evaluerer herefter i
+		-- // Dekrementerer en variabel på samme måde
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{If-Else udtryk}
+
+\begin{frame}[fragile]{If-Else udtryk}
+	\begin{itemize}
+		\item{Programmer skal også kunne noget intelligent}
+		\item{De skal have indbygget logik!}
+		\item{Den mest basale måde, er at bruge conditionals:}
+		\begin{itemize}
+			\item{{\color{C_darkblue}if}()}
+			\item{{\color{C_darkblue}else if}()}
+			\item{{\color{C_darkblue}else}()}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{If-Else udtryk}
+	\begin{itemize}
+		\item{Hvis vi skal illustrere det:}
+		\begin{lstlisting}
+		if ([sandt/falsk udtryk])
+		{
+			handling();
+		}
+		else if ([andet udtryk])
+		{
+			andenHandling();
+		}
+		else
+		{
+			tredjeHandling();
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\subsection{Løkker}
+
+\begin{frame}[fragile]{Løkker}
+	\begin{itemize}
+		\item{En anden vigtig kontrolstruktur er loopet. Løkken.}
+		\item{Hvor et stykke af programmet gentager sig, mens betingelser er opfyldte}
+		\item{I C er der to basale løkketyper:}
+		\begin{itemize}
+			\item{{\color{C_darkblue}while}() og {\color{C_darkblue}for}()}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Løkker}
+	\begin{itemize}
+		\item{En {\color{C_darkblue}while}() fungerer således:}
+		\begin{lstlisting}
+		while([betingelse])
+		{
+			handling();
+		}
+		\end{lstlisting}
+		\item{En {\color{C_darkblue}for}() fungerer således:}
+		\begin{lstlisting}
+		for(int j = 0; j < 5; j++)
+		{
+			handling();
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Løkker}
+	\begin{itemize}
+		\item{herudover eksisterer to brugbare nøgleord:}
+		\begin{lstlisting}
+		continue; // Springer videre til næste loopiteration
+		break; // Bryder ud af loop (og scope)
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\subsection{Switch-cases}
+
+\begin{frame}[fragile]{Switch-cases}
+	\begin{itemize}
+		\item{Sidste ting i dag: {\color{dkgreen}Switch-case}}
+		\item{Før forgrenede vi vha. if-else udtryk}
+		\item{{\color{C_darkblue}switch}() kigger dog ikke på en evaluering}
+		\begin{itemize}
+			\item{Den betragter værdierne dens input-variabel har}
+			\item{Og sender programmet til et sted i koden, på baggrund deraf}
+			\item{Det virker godt til forgrening på baggrund af brugerinput!}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Switch-cases}
+	\begin{itemize}
+		\item{En {\color{C_darkblue}switch}() fungerer således:}
+		\begin{lstlisting}
+		switch(variabel)
+		{
+			case 1:
+			handling();
+			break;
+			
+			case 2:
+			andenHandling();
+			break;
+			
+			default:
+			tredjeHandling();
+			break;
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
 
 \section{Kreative Opgaver}
 %%----------------------------------------------------------------------
 \begin{frame}{Kreative Opgaver}
 	\begin{itemize}
-	\item{Der ligger kreative opgaver tilgængelige:}
+	\item{Det var det for nu!}
+	\item{Der ligger som sidst kreative opgaver tilgængelige:}
 		\begin{itemize}
 		\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_2/Exercises/C_exercises_2_dansk.pdf}{../Del\_2/Exercises/C\_exercises\_2\_dansk.pdf}}
 		\end{itemize}
@@ -180,6 +393,8 @@
 	\item{God arbejdslyst! - Happy Hacking!}
 	\end{itemize}
 \end{frame}
+
+
 
 \end{document}
 
