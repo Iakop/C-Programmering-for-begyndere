@@ -12,7 +12,7 @@ Workshoppen er 4-delt, og kommer til at indeholde følgende emner:
 
 ## Del 2:
   - Forskellige operatorer - %, ++, –-, >, <, == osv.
-  - Løkker – Hvordan man bruger while, for, do while mm.
+  - Løkker – Hvordan man bruger while, for loops
   - Forgreninger – If-else statements, switch
 
 ## Del 3:
