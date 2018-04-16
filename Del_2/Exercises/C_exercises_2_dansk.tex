@@ -97,7 +97,7 @@ if(age > 10 && age < 20)
 \end{lstlisting}
 Kan feks. Være for ranget 10-20.
 
-\subsection{Forskellige udfald}
+\subsection{Nu med Switch-cases}
 Der går rygter om at man også kan hacke en løsning sammen vha. switch cases, og det faktum at heltalsdivision med 10 runder ned. Kunne det her måske virke for hvert range?:
 \begin{lstlisting}
 switch(age/10)
@@ -113,9 +113,33 @@ switch(age/10)
 	...
 }
 \end{lstlisting}
+\pagebreak
 
-\section{Skriv en Fødselsårsomregner}
-	
+\section{for() he's a jolly good fellow!}
+Det er din bedste vens fødselsdag, og du skal skrive en sang til vedkommende. I stedet for at skrive en helt original sang, beslutter du dig for at skrive et program der printer:
+\begin{lstlisting}
+For (s)he's a jolly good fellow!
+\end{lstlisting}
+for hvert år de er fyldt, og til sidst slutter af med:
+\begin{lstlisting}
+Which nobody can deny!
+\end{lstlisting}
+Du vil jo gøre det lettest muligt, så du vælger at bruge loops:
+\begin{lstlisting}
+for(int i = 0; i < age; i++)
+{
+	printf("For (s)he's a jolly good fellow!");
+}
+\end{lstlisting}
+Skriv programmet, og tjek at det korrekte antal linjer bliver skrevet, og \lstinline{Which nobody can deny!} bliver skrevet til sidst.
+
+\subsection{while() he's a jolly good fellow!}
+Skriv nu samme program, men ved hjælp af en \lstinline{while()} løkke, hvor du manuelt inkrementerer tællervariablen.
+
+\subsection{Input}
+For at kunne gentage tricket til alle fødselsdage fremover, beslutter du dig for at smide input i programmet.
+
+Brug \lstinline{scanf()} til at tage inputtet.
+
 \end{document}
-
 
