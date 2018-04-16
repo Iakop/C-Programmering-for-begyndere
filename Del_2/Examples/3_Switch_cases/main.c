@@ -3,11 +3,12 @@
 int main(void)
 {
 	//nu skal vi prøve at sammensætte et lidt større program
-  
+
   //først giver vi brugeren nogle valg!
   printf("What would you like to do?\n\n"
           "1: add\n2: multiply\n3: divide\n\n");
-  //nu skal vi have brugeren til at vælge
+  //så skal vi have brugeren til at vælge med scanf funktionen.
+  
   int choice; //her deklareres en variabel som brugeren giver en værdi
   scanf("%d",&choice);
   
@@ -15,6 +16,7 @@ int main(void)
   float b;
   printf("now choose your two numbers\n");
   scanf("%f %f",&a,&b);
+  
   //switch anvender værdien i parantesen til at vælge en case.
   switch(choice)
   {
@@ -27,7 +29,7 @@ int main(void)
     break; 
     
     case 3:
-    printf("\n%.2f divided by %.2f = %.2f\n",a,b,a/b);
+    printf("\n%.2f divided by %.2f = %.2f\n\n",a,b,a/b);
     break;
 
     default: //Hvis ingen andre cases opfyldes, udføres default.
