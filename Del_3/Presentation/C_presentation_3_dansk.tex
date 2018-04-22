@@ -1,0 +1,411 @@
+%% Præsentation for C-programmering for begyndere
+%% Lavet af Jacob Bechmann Pedersen og Jacob Skjødt Nielsen
+%% For C undervisning i IDA 
+%%
+%% Theme: `DarkConsole'
+%% Copyright (c) 2011-2017 Kazuki Maeda <kmaeda@kmaeda.net>
+%% Distributable under the MIT License:
+%% http://www.opensource.org/licenses/mit-license.php 
+
+%% Preamble
+\documentclass{beamer}
+
+\usepackage{hyperref} % Add a link to your document
+\usepackage{graphicx} % Add pictures to your document
+\usepackage{listings} % Source code formatting and highlighting
+\usepackage[utf8]{inputenc} % Gives UTF-8 encoded characters such as Æ, Ø, Å.
+
+%% Setting the C language type, for viewing pleasure:
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{link}{HTML}{CF55E3}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+
+\lstset{frame=tb,
+  inputencoding=utf8,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numbersep=0pt,
+  keywordsprefix={\#, \<},
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{C_darkblue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{C_lightblue},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  extendedchars=true,
+  literate={æ}{{\ae}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Æ}{{\AE}}1 {Ø}{{\O}}1 {Å}{{\r A}}1,
+}
+
+\usetheme{C_Console}
+\title{C-Programmering for begyndere}
+\date{16. april 2018}
+\subtitle{Del 2 - Operatorer, conditionals, loops og forgreninger}
+\author{Jacob B. Pedersen\footnote{jacob.bp@mvb.net} og Jakob S. Nielsen\footnote{jakob990@gmail.com}}
+
+%% Document
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}{Indhold}
+	\tableofcontents
+\end{frame}
+
+\section{Repetition}
+%%----------------------------------------------------------------------
+\subsection{Hvad lavede vi sidste gang?}
+
+\begin{frame}{Hvad lavede vi sidste gang?}
+	\begin{itemize}
+		\item{Vi fik sat vores første program op}
+		\begin{itemize}
+			\item{Hello World}
+		\end{itemize}
+		\item{Stiftede bekendtskab med et par datatyper}
+		\begin{itemize}
+			\item{{\color{C_darkblue}int}, {\color{C_darkblue}float}, {\color{C_darkblue}char}, {\color{C_darkblue}bool}}
+		\end{itemize}
+		\item{Vi tog input, og skrev ud på konsollen}
+		\begin{itemize}
+			\item{{\color{C_darkblue}scanf}() og {\color{C_darkblue}printf}() fra {\color{C_lightblue}stdio.h}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Hello World}
+
+\begin{frame}[fragile]{Hello World}
+	\begin{itemize}
+		\item{Begynderprogrammet}
+		\item{Indeholdt {\color{C_darkblue}main}(), {\color{C_lightblue}stdio.h}, {\color{C_darkblue}printf}() og en {\color{C_darkblue}return} 0}
+	\end{itemize}
+		\begin{lstlisting}
+		#include <stdio.h>
+
+		int main(void)
+		{
+			printf("Hello world\n");
+			return 0;
+		}
+		\end{lstlisting}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Datatyper}
+
+\begin{frame}[fragile]{Datatyper}
+	\begin{itemize}
+		\item{Et lille {\color{dkgreen}cheatsheet} over datatyperne i C:}
+	\end{itemize}
+		\begin{lstlisting}
+		int i; // Integer/heltal - *mindst* 16 bits
+				// Fra [-32767 til +32767]
+		float f; // Floating point decimal - 32 bits
+				// *mindst* 6 betydende cifre
+		char ch; // Character - *mindst* 8 bits
+				// ASCII dækker fra 0-128 forskellige tegn
+		bool b; // Boolean - true/false - *mindst* 8 bits
+				// Kun 0 anses som Boolsk "false" ved tilskrivning
+				// Skal hentes med #include <stdbool.h>
+		\end{lstlisting}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Datatyper}
+	\begin{itemize}
+		\item{Lidt flere udvidede datatyper:}
+	\end{itemize}
+		\begin{lstlisting}
+		unsigned int ui; // Integer/heltal - *mindst* 16 bits
+				// [0 til +65535]
+		short int f; // Short integer - *mindst* 16 bits
+				// [−32767 til +32767]
+		long int li; // Long integer - *mindst* 32 bits
+				// [−2147483647 til +2147483647]
+		double db; // Double precision float - *mindst* 64 bits
+				// *mindst* 10 betydende cifre
+		long double ldb; // Double precision float - *mindst* 128 bits - *mindst* 10 betydende cifre
+		\end{lstlisting}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Input og output}
+
+\begin{frame}[fragile]{Input og output}
+	\begin{itemize}
+		\item{Til input og output bruges {\color{C_lightblue}\#include <stdio.h>}}
+		\begin{itemize}
+			\item{{\color{C_darkblue}scanf}() tager input, eks:}
+			\begin{lstlisting}
+	scanf("%d %d", &variable1, &variable2);
+			\end{lstlisting}
+			\item{{\color{C_darkblue}printf}() skriver output, eks:}
+			\begin{lstlisting}
+	printf("Variable 1: %d Variable 2: %d", variable1, variable2);
+			\end{lstlisting}
+		\end{itemize}
+		\item{Vi bruger {\color{dkgreen}format specifiers} til at fortælle {\color{C_darkblue}printf}() og {\color{C_darkblue}scanf}() hvilken datatype det skal fortolkes som}
+		\begin{lstlisting}
+	"%d" // Integer format specifier - printer/scanner heltal
+	"%f" // Float format specifier - printer/scanner kommatal
+		"%.2f" // Float med 2 decimaltal
+	"%c" // Char format specifier - printer/scanner skrifttegn
+	"%s" // String format specifier - printer/scanner skriftstrenge
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+\section{I dag}
+%%----------------------------------------------------------------------
+\subsection{Dagens program}
+
+\begin{frame}[fragile]{Dagens program}
+	\begin{itemize}
+		\item{I dag vil vi kigger på følgende:}
+		\item{Operatorer}
+		\begin{itemize}
+			\item{{\color{dkgreen}<}, {\color{dkgreen}>}, {\color{dkgreen}==}, {\color{dkgreen}!=}, {\color{dkgreen}\&\&}, {\color{dkgreen}||}, {\color{dkgreen}++}, {\color{dkgreen}--}}
+		\end{itemize}
+		\item{If-else udtryk}
+		\begin{itemize}
+			\item{{\color{C_darkblue}if}(), {\color{C_darkblue}else if}(), {\color{C_darkblue}else}()}
+		\end{itemize}
+		\item{Løkker}
+		\begin{itemize}
+			\item{{\color{C_darkblue}while}(), {\color{C_darkblue}for}()}
+		\end{itemize}
+		\item{Switch-cases}
+		\begin{itemize}
+			\item{{\color{C_darkblue}switch}()}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Operatorer}
+
+\begin{frame}[fragile]{Operatorer}
+	\begin{itemize}
+		\item{Vi kender allerede de basale, vi brugte til udregninger mm.}
+		\begin{itemize}
+			\item{{\color{dkgreen}+}, {\color{dkgreen}-}, {\color{dkgreen}*}, {\color{dkgreen}/}}
+			\item{{\color{dkgreen}=}, {\color{dkgreen}!}}
+		\end{itemize}
+		\item{Men vi har også brug for at sammenligne værdier}
+		\item{Vi kender det f.eks. fra ligninger og uligheder}
+		\begin{itemize}
+			\item{{\color{dkgreen}>}, {\color{dkgreen}<}, {\color{dkgreen}>=}, {\color{dkgreen}<=}}
+		\end{itemize}
+		\item{Når C ser dette:}
+		\begin{lstlisting}
+		12 > 10
+		\end{lstlisting}
+		\item{Erstattes det med en Boolsk værdi (sandt eller falsk):}
+		\begin{lstlisting}
+		true
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Operatorer}
+	\begin{itemize}
+		\item{Hvilke operatorer har vi så?}
+		\begin{lstlisting}
+		== // Lighed - er værdierne lig hinanden?
+		!= // Ikke lig - er værdierne forskellige?
+		> // Større - Er værdien til venstre større?
+		< // Mindre - Er værdien til venstre mindre?
+		>= // Større/lig - Er værdien til venstre større/lig?
+		<= // Mindrel/lig - Er værdien til venstre mindre/lig?
+		|| // Or - Bruges til at samle udtryk (er A > B ELLER er C > B)
+		&& // And - Bruges til at samle udtryk (er A > B OG er C > B)
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Operatorer}
+	\begin{itemize}
+		\item{Foruden sammenligningerne er der også et ekstra sæt fikse operatorer til aritmetik og tilskrivning:}
+		\begin{lstlisting}
+		+= // Tilskriver venstrehåndsværdien dens egen + højrehåndsværdien
+		-= // Tilskriver venstrehåndsværdien dens egen - højrehåndsværdien
+		++ // Inkrementerer en variabel eks:
+			i++; // Evaluerer i, og inkrementerer med én efter
+			++i; // Inkrementerer først, og evaluerer herefter i
+		-- // Dekrementerer en variabel på samme måde
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{If-Else udtryk}
+
+\begin{frame}[fragile]{If-Else udtryk}
+	\begin{itemize}
+		\item{Programmer skal også kunne noget intelligent}
+		\item{De skal have indbygget logik!}
+		\item{Den mest basale måde, er at bruge conditionals:}
+		\begin{itemize}
+			\item{{\color{C_darkblue}if}()}
+			\item{{\color{C_darkblue}else if}()}
+			\item{{\color{C_darkblue}else}()}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{If-Else udtryk}
+	\begin{itemize}
+		\item{Hvis vi skal illustrere det:}
+		\begin{lstlisting}
+		if ([sandt/falsk udtryk])
+		{
+			handling();
+		}
+		else if ([andet udtryk])
+		{
+			andenHandling();
+		}
+		else
+		{
+			tredjeHandling();
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\subsection{Løkker}
+
+\begin{frame}[fragile]{Løkker}
+	\begin{itemize}
+		\item{En anden vigtig kontrolstruktur er loopet. Løkken.}
+		\item{Hvor et stykke af programmet gentager sig, mens betingelser er opfyldte}
+		\item{I C er der to basale løkketyper:}
+		\begin{itemize}
+			\item{{\color{C_darkblue}while}() og {\color{C_darkblue}for}()}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Løkker}
+	\begin{itemize}
+		\item{En {\color{C_darkblue}while}() fungerer således:}
+		\begin{lstlisting}
+		while([betingelse])
+		{
+			handling();
+		}
+		\end{lstlisting}
+		\item{En {\color{C_darkblue}for}() fungerer således:}
+		\begin{lstlisting}
+		for(int j = 0; j < 5; j++)
+		{
+			handling();
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Løkker}
+	\begin{itemize}
+		\item{herudover eksisterer to brugbare nøgleord:}
+		\begin{lstlisting}
+		continue; // Springer videre til næste loopiteration
+		break; // Bryder ud af loop (og scope)
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\subsection{Switch-cases}
+
+\begin{frame}[fragile]{Switch-cases}
+	\begin{itemize}
+		\item{Sidste ting i dag: {\color{dkgreen}Switch-case}}
+		\item{Før forgrenede vi vha. if-else udtryk}
+		\item{{\color{C_darkblue}switch}() kigger dog ikke på en evaluering}
+		\begin{itemize}
+			\item{Den betragter værdierne dens input-variabel har}
+			\item{Og sender programmet til et sted i koden, på baggrund deraf}
+			\item{Det virker godt til forgrening på baggrund af brugerinput!}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Switch-cases}
+	\begin{itemize}
+		\item{En {\color{C_darkblue}switch}() fungerer således:}
+		\begin{lstlisting}
+		switch(variabel)
+		{
+			case 1:
+			handling();
+			break;
+			
+			case 2:
+			andenHandling();
+			break;
+			
+			default:
+			tredjeHandling();
+			break;
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+\section{Kreative Opgaver}
+%%----------------------------------------------------------------------
+\begin{frame}{Kreative Opgaver}
+	\begin{itemize}
+	\item{Det var det for nu!}
+	\item{Der ligger som sidst kreative opgaver tilgængelige:}
+		\begin{itemize}
+		\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_2/Exercises/C_exercises_2_dansk.pdf}{../Del\_2/Exercises/C\_exercises\_2\_dansk.pdf}}
+		\end{itemize}
+	\item{Der er hjælp at hente her på workshoppen}
+	\item{God arbejdslyst! - Happy Hacking!}
+	\end{itemize}
+\end{frame}
+
+
+
+\end{document}
+
+%%\begin{frame}[fragile]
+	%%\begin{lstlisting}
+		%%#include <stdio.h>
+
+		%%int main(void)
+		%%{
+		%%printf("Hello world\n");
+		%%return 0;
+		%%}
+	%%\end{lstlisting}
+%%\end{frame}
