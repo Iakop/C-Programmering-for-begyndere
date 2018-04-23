@@ -47,7 +47,7 @@
 
 \usetheme{C_Console}
 \title{C-Programmering for begyndere}
-\date{16. april 2018}
+\date{23. april 2018}
 \subtitle{Del 3 - Funktioner, arrays, datarepræsentationer}
 \author{Jacob B. Pedersen\footnote{jacob.bp@mvb.net} og Jakob S. Nielsen\footnote{jakob990@gmail.com}}
 
@@ -107,12 +107,12 @@
 		\begin{lstlisting}
 		int i = 0;
 		while(i <= 10){
-			printf(”%d”, i);
+			printf(''%d'', i);
 			i++;
 		}
 
 		for(int j = 0; j <= 10, j++){
-			printf(”%d”, j);
+			printf(''%d'', j);
 		}
 		\end{lstlisting}
 	\end{itemize}
@@ -147,7 +147,7 @@
 
 \begin{frame}[fragile]{Dagens program}
 	\begin{itemize}
-		\item{I dag kigger vi på mere avanceret brug af C:}
+		\item{I dag kigger vi på lidt mere avanceret brug af C:}
 		\item{Funktioner}
 		\begin{itemize}
 			\item{Genopfriske argumenter og retur-værdier}
@@ -195,7 +195,7 @@
 
 \begin{frame}[fragile]{Funktioner}
 	\begin{itemize}
-		\item{I funktionerne er der en række begrber vi skal genopfriske/kende:}
+		\item{I funktionerne er der en række begreber vi skal genopfriske/kende:}
 		\begin{itemize}
 			\item{{\color{dkgreen}returtype}, {\color{dkgreen}argumenttype/parameter}, {\color{dkgreen}returværdi} og {\color{dkgreen}lokale variable}:}
 		\end{itemize}
@@ -219,7 +219,7 @@
 		int main(void){
 			int a = 3;
 			int b = 2;
-			printf(”%d + %d = %d”, a, b, add(a,b));
+			printf(''%d + %d = %d'', a, b, add(a,b));
 		}
 		\end{lstlisting}
 	\end{itemize}
@@ -235,7 +235,7 @@
 			if(antalGange < 0){
 			return 0;
 			}
-			printf(”%d”, rekursion(antalGange-1));
+			printf(''%d'', rekursion(antalGange-1));
 			return antalGange;
 		}
 		\end{lstlisting}
@@ -284,7 +284,7 @@
 		\item{Eksempel på en implementation:}
 		\begin{lstlisting}
 		// Inplementationen inkluderer headeren, og beskriver funktionerne:
-		#include "library.h"
+		#include ''library.h''
 		
 		int add (int x, int y){
 			int sum = x + y;
@@ -303,7 +303,7 @@
 		\item{Den opfører sig som en liste af chars, og man kan bruge den således:}
 		\begin{lstlisting}
 		char inputstring[LENGTH]; // Angiv længden af arrayet, så computeren kan sætte pladsen til side!
-		scanf(”%s”, &inputString); // scanner efter en string indtil første mellemrum, newline etc.
+		scanf(''%s'', &inputString); // scanner efter en string indtil første mellemrum, newline etc.
 		\end{lstlisting}
 		\item{Det var der en del der fik til at fungere!}
 		\item{Hvordan ser computeren så de data?}
@@ -321,7 +321,7 @@
 		\item{Den opfører sig som en liste af chars, og man kan bruge den således:}
 		\begin{lstlisting}
 		char inputstring[LENGTH]; // Angiv længden af arrayet, så computeren kan sætte pladsen til side!
-		scanf(”%s”, &inputString); // scanner efter en string indtil første mellemrum, newline etc.
+		scanf(''%s'', &inputString); // scanner efter en string indtil første mellemrum, newline etc.
 		\end{lstlisting}
 		\item{Det var der en del der fik til at fungere!}
 		\item{Hvordan ser computeren så de data?}
@@ -357,7 +357,7 @@
 		\begin{lstlisting}
 		// Her på en string:
 		char string[] = ”Zing went the string of my heart!”;
-		printf(”%c”, string[0]);
+		printf(''%c'', string[0]);
 		// Vil printe værdien 'Z'. 
 		\end{lstlisting}
 		\item{Altså er arrays 0-indekserede!}
@@ -366,9 +366,9 @@
 \end{frame}
 
 %%----------------------------------------------------------------------
-\subsection{typedef}
+\subsection{Typedef}
 
-\begin{frame}[fragile]{typedefs og enums}
+\begin{frame}[fragile]{Typedef}
 	\begin{itemize}
 		\item{Hvad så med data der ikke er overskueligt i formen int, float osv.?}
 		\item{Her kan {\color{C_darkblue}typedef} redde os:}
@@ -388,9 +388,9 @@
 \end{frame}
 
 %%----------------------------------------------------------------------
-\subsection{enum}
+\subsection{Enum}
 
-\begin{frame}[fragile]{typedefs og enums}
+\begin{frame}[fragile]{Enum}
 	\begin{itemize}
 		\item{Modsvar til {\color{C_darkblue}typedef}, {\color{C_darkblue}enum} bruges til at navngive værdier i stedet for datatyper
 		\begin{lstlisting}
@@ -406,19 +406,105 @@
 	\end{itemize}
 \end{frame}
 
-\section{Kreative Opgaver}
 %%----------------------------------------------------------------------
-\begin{frame}{Kreative Opgaver}
+\subsection{Structures}
+
+\begin{frame}[fragile]{Structures}
 	\begin{itemize}
-	\item{Det var det for nu!}
-	\item{Der ligger som sidst kreative opgaver tilgængelige:}
-		\begin{itemize}
-		\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_2/Exercises/C_exercises_2_dansk.pdf}{../Del\_2/Exercises/C\_exercises\_2\_dansk.pdf}}
-		\end{itemize}
-	\item{Der er hjælp at hente her på workshoppen}
-	\item{God arbejdslyst! - Happy Hacking!}
+		\item{En rigtig fed måde at repræsentere måde på}
+		\item{{\color{C_darkblue}struct} minder lidt om en tabelrække i databaser}
+		\begin{lstlisting}
+		// Struct beskrivelse af en genstand i f.eks. varelagersystem:
+		struct stuff{
+			nt number;
+			char code[4];
+			float cost;
+		};
+		\end{lstlisting}
 	\end{itemize}
 \end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Structures}
+	\begin{itemize}
+		\item{På PC'en lagres en structs data således:}
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{assets/struct_representation.jpg}
+		\end{center}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Structures}
+	\begin{itemize}
+		\item{Man tilgår datafelterne i en struct vha. membership operatoren:}
+		\begin{lstlisting}
+		struct stuff{
+		…
+		}
+		stuff book = { .number = 123,
+					.code = ''ab12'',
+					.cost = 3.99 };
+		printf(''The books number is %d, code is %s, and it costs %f'', book.number, book.code, book.cost);
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Unions}
+
+\begin{frame}[fragile]{Unions}
+	\begin{itemize}
+		\item{Modsvar til {\color{C_darkblue}struct}, er det man kalder en {\color{C_darkblue}union}}
+		\item{Den bruges til data, man ikke helt kan garantere typen på}
+		\item{Længden i hukommelse afgøres af den længste datatype, her double:}
+		\begin{lstlisting}
+		union varchar{
+			int digit;
+			double bigFloat;
+			char letter;
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Unions}
+	\begin{itemize}
+		\item{Den kan kun holde én værdi ad gangen}
+		\item{Ens eget ansvar at holde styr på typen den holder}
+		\begin{lstlisting}
+		// Man kan instantiere dem som man altid har gjort:
+		union varchar a;
+		// initialisere dem vha. dot operator:
+		a.letter = ’R’;
+		// Ud fra en anden union:
+		union varchar b = a;
+		// Eller målrettet enten den første member, eller specifik member i declarationen:
+		union varchar c = {12};
+		union varchar d = {.bigFloat = 12345.678};
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+
+
+%%\section{Kreative Opgaver}
+%%----------------------------------------------------------------------
+%%\begin{frame}{Kreative Opgaver}
+	%%\begin{itemize}
+	%%\item{Det var det for nu!}
+	%%\item{Der ligger som sidst kreative opgaver tilgængelige:}
+	%%	\begin{itemize}
+	%%	\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/%%Del_2/Exercises/C_exercises_2_dansk.pdf}{../Del\_2/Exercises/C\_exercises\_2\_dansk.pdf}}
+%%		\end{itemize}
+%%	\item{Der er hjælp at hente her på workshoppen}
+%%	\item{God arbejdslyst! - Happy Hacking!}
+%%	\end{itemize}
+%%\end{frame}
 
 
 
