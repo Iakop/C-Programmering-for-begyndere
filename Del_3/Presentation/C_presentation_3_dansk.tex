@@ -48,7 +48,7 @@
 \usetheme{C_Console}
 \title{C-Programmering for begyndere}
 \date{16. april 2018}
-\subtitle{Del 2 - Operatorer, conditionals, loops og forgreninger}
+\subtitle{Del 3 - Funktioner, arrays, datarepræsentationer}
 \author{Jacob B. Pedersen\footnote{jacob.bp@mvb.net} og Jakob S. Nielsen\footnote{jakob990@gmail.com}}
 
 %% Document
@@ -66,104 +66,77 @@
 %%----------------------------------------------------------------------
 \subsection{Hvad lavede vi sidste gang?}
 
-\begin{frame}{Hvad lavede vi sidste gang?}
+\begin{frame}[fragile]{Hvad lavede vi sidste gang?}
 	\begin{itemize}
-		\item{Vi fik sat vores første program op}
-		\begin{itemize}
-			\item{Hello World}
-		\end{itemize}
-		\item{Stiftede bekendtskab med et par datatyper}
-		\begin{itemize}
-			\item{{\color{C_darkblue}int}, {\color{C_darkblue}float}, {\color{C_darkblue}char}, {\color{C_darkblue}bool}}
-		\end{itemize}
-		\item{Vi tog input, og skrev ud på konsollen}
-		\begin{itemize}
-			\item{{\color{C_darkblue}scanf}() og {\color{C_darkblue}printf}() fra {\color{C_lightblue}stdio.h}}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-%%----------------------------------------------------------------------
-\subsection{Hello World}
-
-\begin{frame}[fragile]{Hello World}
-	\begin{itemize}
-		\item{Begynderprogrammet}
-		\item{Indeholdt {\color{C_darkblue}main}(), {\color{C_lightblue}stdio.h}, {\color{C_darkblue}printf}() og en {\color{C_darkblue}return} 0}
-	\end{itemize}
+		\item{Vi gennemgik operatorer, og deres betydning for if-else statements:}
 		\begin{lstlisting}
-		#include <stdio.h>
-
-		int main(void)
-		{
-			printf("Hello world\n");
-			return 0;
+		if([betingelse]){
+			handling();
+		}
+		else if({betingelse2]){
+			handling2();
+		}
+		else{
+			handling3();
 		}
 		\end{lstlisting}
-\end{frame}
-
-%%----------------------------------------------------------------------
-\subsection{Datatyper}
-
-\begin{frame}[fragile]{Datatyper}
-	\begin{itemize}
-		\item{Et lille {\color{dkgreen}cheatsheet} over datatyperne i C:}
 	\end{itemize}
-		\begin{lstlisting}
-		int i; // Integer/heltal - *mindst* 16 bits
-				// Fra [-32767 til +32767]
-		float f; // Floating point decimal - 32 bits
-				// *mindst* 6 betydende cifre
-		char ch; // Character - *mindst* 8 bits
-				// ASCII dækker fra 0-128 forskellige tegn
-		bool b; // Boolean - true/false - *mindst* 8 bits
-				// Kun 0 anses som Boolsk "false" ved tilskrivning
-				// Skal hentes med #include <stdbool.h>
-		\end{lstlisting}
 \end{frame}
 
-%%----------------------------------------------------------------------
+%----------------------------------------------------------------------
 
-\begin{frame}[fragile]{Datatyper}
+\begin{frame}[fragile]{Hvad lavede vi sidste gang?}
 	\begin{itemize}
-		\item{Lidt flere udvidede datatyper:}
+		\item{Operatorerne selv evalueredes blot til Boolske udtryk som {\color{dkgreen}true} og {\color{dkgreen}false}:}
+		\begin{lstlisting}
+		1 > 2; // false
+		3 >= 3; // true
+		12 > 2 && 12 < 11; // false
+		12 > 2 || 12 < 11; // true
+		\end{lstlisting}
 	\end{itemize}
-		\begin{lstlisting}
-		unsigned int ui; // Integer/heltal - *mindst* 16 bits
-				// [0 til +65535]
-		short int f; // Short integer - *mindst* 16 bits
-				// [−32767 til +32767]
-		long int li; // Long integer - *mindst* 32 bits
-				// [−2147483647 til +2147483647]
-		double db; // Double precision float - *mindst* 64 bits
-				// *mindst* 10 betydende cifre
-		long double ldb; // Double precision float - *mindst* 128 bits - *mindst* 10 betydende cifre
-		\end{lstlisting}
 \end{frame}
 
-%%----------------------------------------------------------------------
-\subsection{Input og output}
 
-\begin{frame}[fragile]{Input og output}
+%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Hvad lavede vi sidste gang?}
 	\begin{itemize}
-		\item{Til input og output bruges {\color{C_lightblue}\#include <stdio.h>}}
-		\begin{itemize}
-			\item{{\color{C_darkblue}scanf}() tager input, eks:}
-			\begin{lstlisting}
-	scanf("%d %d", &variable1, &variable2);
-			\end{lstlisting}
-			\item{{\color{C_darkblue}printf}() skriver output, eks:}
-			\begin{lstlisting}
-	printf("Variable 1: %d Variable 2: %d", variable1, variable2);
-			\end{lstlisting}
-		\end{itemize}
-		\item{Vi bruger {\color{dkgreen}format specifiers} til at fortælle {\color{C_darkblue}printf}() og {\color{C_darkblue}scanf}() hvilken datatype det skal fortolkes som}
+		\item{På samme måde kunne de også bruges som betingelser i løkkerne}
+		\item{Her var der {\color{C_darkblue}while}() og {\color{C_darkblue}for}() -løkkerne:}
 		\begin{lstlisting}
-	"%d" // Integer format specifier - printer/scanner heltal
-	"%f" // Float format specifier - printer/scanner kommatal
-		"%.2f" // Float med 2 decimaltal
-	"%c" // Char format specifier - printer/scanner skrifttegn
-	"%s" // String format specifier - printer/scanner skriftstrenge
+		int i = 0;
+		while(i <= 10){
+			printf(”%d”, i);
+			i++;
+		}
+
+		for(int j = 0; j <= 10, j++){
+			printf(”%d”, j);
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Hvad lavede vi sidste gang?}
+	\begin{itemize}
+		\item{Til sidst kiggede vi på {\color{C_darkblue}switch}-cases:}
+		\begin{lstlisting}
+		switch(variabel)
+		{
+			case 1:
+			handling();
+			break;
+
+			case 2:
+			andenHandling();
+			break;
+
+			default:
+			break;
+		}
 		\end{lstlisting}
 	\end{itemize}
 \end{frame}
@@ -174,118 +147,45 @@
 
 \begin{frame}[fragile]{Dagens program}
 	\begin{itemize}
-		\item{I dag vil vi kigger på følgende:}
-		\item{Operatorer}
+		\item{I dag kigger vi på mere avanceret brug af C:}
+		\item{Funktioner}
 		\begin{itemize}
-			\item{{\color{dkgreen}<}, {\color{dkgreen}>}, {\color{dkgreen}==}, {\color{dkgreen}!=}, {\color{dkgreen}\&\&}, {\color{dkgreen}||}, {\color{dkgreen}++}, {\color{dkgreen}--}}
+			\item{Genopfriske argumenter og retur-værdier}
+			\item{Header- og implementationsfiler}
+			\item{Hvad skal der til for at lave et library?}
 		\end{itemize}
-		\item{If-else udtryk}
+		\item{Arrays}
 		\begin{itemize}
-			\item{{\color{C_darkblue}if}(), {\color{C_darkblue}else if}(), {\color{C_darkblue}else}()}
+			\item{Lister over variable, refereret til ved indeks}
+			\item{Nogle af jer har forsøgt sig med char array AKA strings}
 		\end{itemize}
-		\item{Løkker}
+		\item{Anderledes datarepræsentation:}
 		\begin{itemize}
-			\item{{\color{C_darkblue}while}(), {\color{C_darkblue}for}()}
-		\end{itemize}
-		\item{Switch-cases}
-		\begin{itemize}
-			\item{{\color{C_darkblue}switch}()}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-%%----------------------------------------------------------------------
-\subsection{Operatorer}
-
-\begin{frame}[fragile]{Operatorer}
-	\begin{itemize}
-		\item{Vi kender allerede de basale, vi brugte til udregninger mm.}
-		\begin{itemize}
-			\item{{\color{dkgreen}+}, {\color{dkgreen}-}, {\color{dkgreen}*}, {\color{dkgreen}/}}
-			\item{{\color{dkgreen}=}, {\color{dkgreen}!}}
-		\end{itemize}
-		\item{Men vi har også brug for at sammenligne værdier}
-		\item{Vi kender det f.eks. fra ligninger og uligheder}
-		\begin{itemize}
-			\item{{\color{dkgreen}>}, {\color{dkgreen}<}, {\color{dkgreen}>=}, {\color{dkgreen}<=}}
-		\end{itemize}
-		\item{Når C ser dette:}
-		\begin{lstlisting}
-		12 > 10
-		\end{lstlisting}
-		\item{Erstattes det med en Boolsk værdi (sandt eller falsk):}
-		\begin{lstlisting}
-		true
-		\end{lstlisting}
-	\end{itemize}
-\end{frame}
-
-%%----------------------------------------------------------------------
-
-\begin{frame}[fragile]{Operatorer}
-	\begin{itemize}
-		\item{Hvilke operatorer har vi så?}
-		\begin{lstlisting}
-		== // Lighed - er værdierne lig hinanden?
-		!= // Ikke lig - er værdierne forskellige?
-		> // Større - Er værdien til venstre større?
-		< // Mindre - Er værdien til venstre mindre?
-		>= // Større/lig - Er værdien til venstre større/lig?
-		<= // Mindrel/lig - Er værdien til venstre mindre/lig?
-		|| // Or - Bruges til at samle udtryk (er A > B ELLER er C > B)
-		&& // And - Bruges til at samle udtryk (er A > B OG er C > B)
-		\end{lstlisting}
-	\end{itemize}
-\end{frame}
-%%----------------------------------------------------------------------
-
-\begin{frame}[fragile]{Operatorer}
-	\begin{itemize}
-		\item{Foruden sammenligningerne er der også et ekstra sæt fikse operatorer til aritmetik og tilskrivning:}
-		\begin{lstlisting}
-		+= // Tilskriver venstrehåndsværdien dens egen + højrehåndsværdien
-		-= // Tilskriver venstrehåndsværdien dens egen - højrehåndsværdien
-		++ // Inkrementerer en variabel eks:
-			i++; // Evaluerer i, og inkrementerer med én efter
-			++i; // Inkrementerer først, og evaluerer herefter i
-		-- // Dekrementerer en variabel på samme måde
-		\end{lstlisting}
-	\end{itemize}
-\end{frame}
-
-%%----------------------------------------------------------------------
-\subsection{If-Else udtryk}
-
-\begin{frame}[fragile]{If-Else udtryk}
-	\begin{itemize}
-		\item{Programmer skal også kunne noget intelligent}
-		\item{De skal have indbygget logik!}
-		\item{Den mest basale måde, er at bruge conditionals:}
-		\begin{itemize}
-			\item{{\color{C_darkblue}if}()}
-			\item{{\color{C_darkblue}else if}()}
-			\item{{\color{C_darkblue}else}()}
+			\item{{\color{C_darkblue}typedef} og {\color{C_darkblue}enum}}
+			\item{Klynger af data i {\color{C_darkblue}structs}}
+			\item{Flerformet data i {\color{C_darkblue}unions}}
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 %%----------------------------------------------------------------------
+\subsection{Funktioner}
 
-\begin{frame}[fragile]{If-Else udtryk}
+\begin{frame}[fragile]{Funktioner}
 	\begin{itemize}
-		\item{Hvis vi skal illustrere det:}
-		\begin{lstlisting}
-		if ([sandt/falsk udtryk])
-		{
-			handling();
-		}
-		else if ([andet udtryk])
-		{
-			andenHandling();
-		}
-		else
-		{
-			tredjeHandling();
+		\item{Vi har ofte brugt funktioner:}
+		\begin{itemize}
+			\item{{\color{C_darkblue}pow}(), {\color{C_darkblue}sqrt}(), {\color{C_darkblue}rand}(), {\color{C_darkblue}printf}() og {\color{C_darkblue}scanf}()}
+		\end{itemize}
+		\item{De ligner alle i skrift lidt matematiske funktioner:}
+		\begin{equation}
+      	printf(x)
+    		\end{equation}
+    		\item{Og vi kan selvfølgelig også designe vores egne!}
+    		\item{Vi husker tydeligt en funktionsdefinition, vi har med hver gang:}
+    		\begin{lstlisting}
+		int main(int argc, char ** argv){
+			return 0;
 		}
 		\end{lstlisting}
 	\end{itemize}
@@ -293,88 +193,50 @@
 
 %%----------------------------------------------------------------------
 
-\subsection{Løkker}
-
-\begin{frame}[fragile]{Løkker}
+\begin{frame}[fragile]{Funktioner}
 	\begin{itemize}
-		\item{En anden vigtig kontrolstruktur er loopet. Løkken.}
-		\item{Hvor et stykke af programmet gentager sig, mens betingelser er opfyldte}
-		\item{I C er der to basale løkketyper:}
+		\item{I funktionerne er der en række begrber vi skal genopfriske/kende:}
 		\begin{itemize}
-			\item{{\color{C_darkblue}while}() og {\color{C_darkblue}for}()}
+			\item{{\color{dkgreen}returtype}, {\color{dkgreen}argumenttype/parameter}, {\color{dkgreen}returværdi} og {\color{dkgreen}lokale variable}:}
 		\end{itemize}
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{assets/function_description.png}
+	\end{center}
 	\end{itemize}
 \end{frame}
 
 %%----------------------------------------------------------------------
 
-\begin{frame}[fragile]{Løkker}
+\begin{frame}[fragile]{Funktioner}
 	\begin{itemize}
-		\item{En {\color{C_darkblue}while}() fungerer således:}
+		\item{Så først defineres funktionen, og derefter  kan den kaldes som alt andet i main:}
 		\begin{lstlisting}
-		while([betingelse])
-		{
-			handling();
+		int add( int a, int b ){
+			int result = a + b;
+			return result;
+		}
+
+		int main(void){
+			int a = 3;
+			int b = 2;
+			printf(”%d + %d = %d”, a, b, add(a,b));
 		}
 		\end{lstlisting}
-		\item{En {\color{C_darkblue}for}() fungerer således:}
-		\begin{lstlisting}
-		for(int j = 0; j < 5; j++)
-		{
-			handling();
-		}
-		\end{lstlisting}
 	\end{itemize}
 \end{frame}
 
 %%----------------------------------------------------------------------
 
-\begin{frame}[fragile]{Løkker}
+\begin{frame}[fragile]{Funktioner}
 	\begin{itemize}
-		\item{herudover eksisterer to brugbare nøgleord:}
+		\item{Noget andet fedt man kan med sine funktioner, er at kalde dem rekursivt:}
 		\begin{lstlisting}
-		continue; // Springer videre til næste loopiteration
-		break; // Bryder ud af loop (og scope)
-		\end{lstlisting}
-	\end{itemize}
-\end{frame}
-
-%%----------------------------------------------------------------------
-
-\subsection{Switch-cases}
-
-\begin{frame}[fragile]{Switch-cases}
-	\begin{itemize}
-		\item{Sidste ting i dag: {\color{dkgreen}Switch-case}}
-		\item{Før forgrenede vi vha. if-else udtryk}
-		\item{{\color{C_darkblue}switch}() kigger dog ikke på en evaluering}
-		\begin{itemize}
-			\item{Den betragter værdierne dens input-variabel har}
-			\item{Og sender programmet til et sted i koden, på baggrund deraf}
-			\item{Det virker godt til forgrening på baggrund af brugerinput!}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-%%----------------------------------------------------------------------
-
-\begin{frame}[fragile]{Switch-cases}
-	\begin{itemize}
-		\item{En {\color{C_darkblue}switch}() fungerer således:}
-		\begin{lstlisting}
-		switch(variabel)
-		{
-			case 1:
-			handling();
-			break;
-			
-			case 2:
-			andenHandling();
-			break;
-			
-			default:
-			tredjeHandling();
-			break;
+		int rekursion(int antalGange){
+			if(antalGange < 0){
+			return 0;
+			}
+			printf(”%d”, rekursion(antalGange-1));
+			return antalGange;
 		}
 		\end{lstlisting}
 	\end{itemize}
