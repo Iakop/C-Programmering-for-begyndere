@@ -239,6 +239,170 @@
 			return antalGange;
 		}
 		\end{lstlisting}
+		\item{Man skal bare huske at sikre at computeren kan komme ud af de rekursive kald igen}
+		\item{Ellers risikerer man et:}
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{assets/so-logo.png}
+	\end{center}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Funktioner}
+	\begin{itemize}
+		\item{Vi har berørt libraries lidt før:}
+		\begin{itemize}
+			\item{{\color{dkgreen}stdio.h}, {\color{dkgreen}math.h}, {\color{dkgreen}stdbool.h}}
+			\item{De er alle sammen standard libraries}
+			\item{Er enten en del af compileren eller operativsystemet}
+		\end{itemize}
+		\item{Men vi kan sagtens lave vores egne!}
+		\begin{itemize}
+			\item{Kræver blot en header-fil og implementationsfil:}
+			\item{{\color{C_lightblue}library.h} og {\color{C_lightblue}library.c}}
+			\item{Headeren er hvor vi deklarerer (/prototyper) vores variable og funktioner}
+			\item{Implementationsfilen er til at beskrive den specifikke funktionalitet}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Funktioner}
+	\begin{itemize}
+		\item{Eksempel på en header:}
+		\begin{lstlisting}
+		// Header skrives med "include guard" og instantierer funktionerne:
+		#ifndef LIBRARY_H
+		#define LIBRARY_H
+
+		int add(int x, int y);
+
+		#endif /* LIBRARY_H */
+		\end{lstlisting}
+		\item{Eksempel på en implementation:}
+		\begin{lstlisting}
+		// Inplementationen inkluderer headeren, og beskriver funktionerne:
+		#include "library.h"
+		
+		int add (int x, int y){
+			int sum = x + y;
+			return sum;
+		}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{Arrays}
+
+\begin{frame}[fragile]{Arrays}
+	\begin{itemize}
+		\item{Vi har allerede stiftet bekendtskab med char arrays i opgavesæt 1}
+		\item{Den opfører sig som en liste af chars, og man kan bruge den således:}
+		\begin{lstlisting}
+		char inputstring[LENGTH]; // Angiv længden af arrayet, så computeren kan sætte pladsen til side!
+		scanf(”%s”, &inputString); // scanner efter en string indtil første mellemrum, newline etc.
+		\end{lstlisting}
+		\item{Det var der en del der fik til at fungere!}
+		\item{Hvordan ser computeren så de data?}
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{assets/char_array.png}
+		\end{center}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Arrays}
+	\begin{itemize}
+		\item{Vi har allerede stiftet bekendtskab med char arrays i opgavesæt 1}
+		\item{Den opfører sig som en liste af chars, og man kan bruge den således:}
+		\begin{lstlisting}
+		char inputstring[LENGTH]; // Angiv længden af arrayet, så computeren kan sætte pladsen til side!
+		scanf(”%s”, &inputString); // scanner efter en string indtil første mellemrum, newline etc.
+		\end{lstlisting}
+		\item{Det var der en del der fik til at fungere!}
+		\item{Hvordan ser computeren så de data?}
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{assets/char_array.png}
+		\end{center}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Arrays}
+	\begin{itemize}
+		\item{Char arrays er klart en oplagt brugt af denne type "lister"}
+		\item{Men der findes arrays af alle typer:}
+		\begin{lstlisting}
+		// F.eks. en integer array:
+		int heltal[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		// Eller float array:
+		float kommatal[] = {0.1, 1.5, 2.46, 3.23, 4.44, 5.71, 6.66, 7.91, 8.0, 9.11, 10.4};
+		\end{lstlisting}
+		\item{Der findes andre måder at opstille sådanne lister f.eks. dynamisk};
+		\item{det er dog et avanceret emne, med skjulte fælder!}
+		
+	\end{itemize}
+\end{frame}
+		
+%%----------------------------------------------------------------------
+
+\begin{frame}[fragile]{Arrays}
+	\begin{itemize}
+		\item{Når man tilgår array elementer, sker det vha. indeks:}
+		\begin{lstlisting}
+		// Her på en string:
+		char string[] = ”Zing went the string of my heart!”;
+		printf(”%c”, string[0]);
+		// Vil printe værdien 'Z'. 
+		\end{lstlisting}
+		\item{Altså er arrays 0-indekserede!}
+		\item{men deres størrelse er angivet i antal elementer!, minimum 1! som får indeks 0}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{typedef}
+
+\begin{frame}[fragile]{typedefs og enums}
+	\begin{itemize}
+		\item{Hvad så med data der ikke er overskueligt i formen int, float osv.?}
+		\item{Her kan {\color{C_darkblue}typedef} redde os:}
+		\begin{lstlisting}
+		// Et smart eksempel kunne være at gøre en fysisk udregning overskuelig:
+		typedef float length;
+		typedef float width;
+		typedef float height;
+		typedef float volume;
+		// Det er altid vigtigt at koden er læselig for beskueren!
+		length l = 23;
+		width w = 32.5;
+		height h = 55;
+		volume v = l * w * h;
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------
+\subsection{enum}
+
+\begin{frame}[fragile]{typedefs og enums}
+	\begin{itemize}
+		\item{Modsvar til {\color{C_darkblue}typedef}, {\color{C_darkblue}enum} bruges til at navngive værdier i stedet for datatyper
+		\begin{lstlisting}
+		// Hvis man skriver dem således, bliver de fortløbende nummereret fra 0:
+		enum color { red, orange, yellow, green, blue, purple };
+		// Ellers kan man selv bestemme hvad talværdi de har tilknyttet:
+		enum color { red = 3, orange = 4, yellow = 0, green = 1, blue = 2, purple = 2 };
+		
+		// Variable af enum typen deklareres/initialiseres således:
+		enum color favouriteColor = purple;
+		\end{lstlisting}
+		\item{Man kan også bruge {\color{C_darkblue}enum} med switch-cases!}
 	\end{itemize}
 \end{frame}
 
