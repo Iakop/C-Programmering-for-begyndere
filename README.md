@@ -18,10 +18,8 @@ Workshoppen er 4-delt, og kommer til at indeholde følgende emner:
 ## Del 3:
   - Egne funktioner - argumenter, returværdier, rekursion
   - Lister og datastrukturer – arrays, structs, enums
-  - Pointers – hvad betyder de? Og hvordan bruger vi dem?
 
 ## Del 4:
-  - Fil input/output
   - Microcontroller-programmering i C – Småforsøg med Arduino
 
 Det kræves at man til workshoppen har sin egen PC med, hvor følgende udviklingsværktøjer vil blive brugt:
