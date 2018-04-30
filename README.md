@@ -20,7 +20,10 @@ Workshoppen er 4-delt, og kommer til at indeholde følgende emner:
   - Lister og datastrukturer – arrays, structs, enums
 
 ## Del 4:
-  - Microcontroller-programmering i C – Småforsøg med Arduino
+  - Microcontroller-programmering i C
+  - Introduction til Arduino C
+  - Physical Computing: input og output
+  - Hardware og C
 
 Det kræves at man til workshoppen har sin egen PC med, hvor følgende udviklingsværktøjer vil blive brugt:
   - CodeLite – Gratis, open-source IDE til bl.a. C programmering.
