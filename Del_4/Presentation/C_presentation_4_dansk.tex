@@ -112,7 +112,7 @@
 		\begin{lstlisting}
 		char string[numberOfChars]; // Char array
 		int intArray[number of ints]; // Integer array 
-		float floArray[number of ints]; // Float array 
+		float floArray[number of floats]; // Float array 
 		\end{lstlisting}
 	\end{itemize}
 \end{frame}
@@ -123,7 +123,7 @@
 	\begin{itemize}
 		\item{Vi fik også lært at repræsentere data vha. egne datatyper:}
 		\begin{itemize}
-			\item{{\color{C_darkblue}typedef} gav en dataype et alias}
+			\item{{\color{C_darkblue}typedef} gav en datatype et alias}
 			\item{{\color{C_darkblue}enum} gav integer værdier navne i stedet}
 		\end{itemize}
 		\begin{lstlisting}
@@ -185,6 +185,30 @@
 \end{frame}
 %%----------------------------------------------------------------------
 
+\subsection{Hvad er Arduino}
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Hvad er Arduino?}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+	\item{{\color{arduinoBlue}Arduino} er et forsøg på at gøre microcontrollers lette at programmere i C.}
+	\item{Microcontrollers er enheder, der indholder alle delene i en lille computer}
+	\item{Bygget specielt til at styre anden elektronik vha. software}
+	\item{Arduinoen giver dette inteface gennem sine "pins" som vist:}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{assets/microcontroller.png}
+	\end{center}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{assets/arduino_layout.png}
+	\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+%%----------------------------------------------------------------------
+
 \subsection{Installation af Arduino IDE}
 
 %%----------------------------------------------------------------------
@@ -197,24 +221,158 @@
 \end{frame}
 %%----------------------------------------------------------------------
 
+\subsection{Introduktion til Arduino-funktionerne}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Introduktion til Arduino-funktionerne}
+	\begin{itemize}
+		\item{Arduino IDE indeholder faktisk blot en skjult C compiler}
+		\item{Den skriver C "lidt om" for at gøre Microcontrollere lettere for nybegyndere}
+		\item{Det hele gøres vha. {\color{arduinoBlue}"arduino.h"} som er automatisk {\color{dkgreen}#include}'d}
+		\item{en af de vigtigste forskelle er at den fjerner {\color{C_darkblue}main}(), og erstatter den med dette:}
+		\begin{lstlisting}
+			void setup(){
+				// Kode der kører en gang i starten af Arduino programmet
+			}
+			void loop(){
+				// Kode der kører i ring resten af tiden.
+			}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+%%----------------------------------------------------------------------
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Introduktion til Arduino-funktionerne}
+	\begin{itemize}
+		\item{Det betyder i virkeligheden bare:}
+		\begin{lstlisting}
+			int main(void){
+				// Koder der kører i starten af programmet
+				
+				while(1){
+					// Kode der kører i ring resten af tiden.
+				}
+				return 0;
+			}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+%%----------------------------------------------------------------------
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Introduktion til Arduino-funktionerne}
+	\begin{itemize}
+		\item{Arduino behandler typisk to former af fysisk data:}
+		\item{Digital:}
+		\begin{center}
+		\includegraphics[height=0.1\textheight]{assets/digital_data.png}
+	\end{center}
+		\item{Analog:}
+		\begin{center}
+		\includegraphics[height=0.7\textheight]{assets/analog_data.png}
+	\end{center}
+	\end{itemize}
+\end{frame}
+%%----------------------------------------------------------------------
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Introduktion til Arduino-funktionerne}
+	\begin{itemize}
+		\item{En kort oversigt over nogle af Arduinos vigtigste funktioner:}
+		\begin{lstlisting}
+		pinMode(pin, mode); // Mode kan være enten INPUT, eller OUTPUT i det fleste tilfælde, 	men også INPUT_PULLUP, som er god til trykknapper.
+		digitalRead(pin); // Læser digital værdi – true eller false, 1, 0, HIGH, LOW, fra pin.
+		digitalWrite(pin, value); //  Value kan gives som true, false, 1, 0, eller HIGH og LOW.
+		analogRead(analogPin); // Læser en værdi fra 0-1023 fra en analog pin A0-6
+		analogWrite(pwmPin, value); // Skriver et PWM signal til en PWM pin (semi analogt signal)
+		delay(milliseconds); // Bremser processoren i en tidsperiode, for at vente med næste handling.
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+%%----------------------------------------------------------------------
+
 \subsection{Blinky}
 
 %%----------------------------------------------------------------------
 \begin{frame}[fragile]{Blinky}
 \begin{columns}
-	\begin{column}{0.3\textwidth}
+	\begin{column}{0.5\textwidth}
 	\begin{itemize}
 		\item{Blinky er Arduinos "Hello World"}
 		\item{Vi skal kun bruge Arduinoen selv}
 		\item{Og et kabel til at uploade sketchen!}
 	\end{itemize}
 	\end{column}
-	\begin{column}{0.7\textwidth}
+	\begin{column}{0.5\textwidth}
 	\begin{center}
-		\includegraphics[width=0.7\textwidth]{assets/char_array.png}
+		\includegraphics[width=0.7\textwidth]{../Examples/1_Blinky/1_Blinky_bb.png}
 	\end{center}
 	\end{column}
 \end{columns}
+\end{frame}
+%%----------------------------------------------------------------------
+
+\subsection{Input/Output}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Input/Output}
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+	\begin{itemize}
+		\item{Nu kobler vi selv en LED på}
+		\item{Vi tilføjer også en trykknap med pulldown}
+		\begin{itemize}
+			\item{Betyder at den som udgangspunkt læses som false/LOW}
+		\end{itemize}
+	\end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{../Examples/2_IO/2_IO_bb.png}
+	\end{center}
+	\end{column}
+\end{columns}
+\end{frame}
+%%----------------------------------------------------------------------
+
+\subsection{Analog I/O}
+
+%%----------------------------------------------------------------------
+\begin{frame}[fragile]{Input/Output}
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+	\begin{itemize}
+		\item{Vi kigger også lidt på den analoge måde at gøre det}
+		\item{I stedet for en trykknap bruger vi nu et potentiometer}
+		\begin{itemize}
+			\item{Den kan ændre den analoge spænding henover sig fra 0-5V}
+		\end{itemize}
+		\item{Vi styre LED'ens spænding med den og en PWM udgang!}
+	\end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{../Examples/3_PotRead/3_PotRead_bb.png}
+	\end{center}
+	\end{column}
+\end{columns}
+\end{frame}
+%%----------------------------------------------------------------------
+
+\section{Kreative Opgaver}
+%%----------------------------------------------------------------------
+\begin{frame}{Kreative Opgaver}
+	\begin{itemize}
+	\item{Nu kan I starten af Arduino}
+	\item{Opgaverne i dag kommer fra min Arduino Workshop}
+	\item{Der ligger kreative opgaver tilgængelige, prøv at koble jeres udvidede C på:}
+		\begin{itemize}
+		\item{\color{link}\href{https://github.com/Iakop/C-Programmering-for-begyndere/tree/master/Del_4/Exercises/C_exercises_4_dansk.pdf}{../Del\_4/Exercises/C\_exercises\_4\_dansk.pdf}}
+		\end{itemize}
+	\item{Der er hjælp at hente her på workshoppen}
+	\item{God arbejdslyst! - Happy Hacking!}
+	\end{itemize}
 \end{frame}
 %%----------------------------------------------------------------------
 
